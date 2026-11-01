@@ -8,7 +8,8 @@ import json, re, subprocess, sys, uuid
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-PERSONA = (BASE / "persona.md").read_text(encoding="utf-8")
+import os
+PERSONA = Path(os.environ.get("PERSONA_FILE", BASE / "persona.md")).read_text(encoding="utf-8")
 CLI = ["claude", "-p", "--tools", "", "--strict-mcp-config", "--setting-sources", "", "--output-format", "json"]
 
 FASES = [
@@ -65,7 +66,7 @@ def fase(nombre, max_turnos, alcance, sistema_agente, previo):
     for _ in range(max_turnos):
         resp, c = llamar(msg_user, sistema_agente, s_agente, primera); coste += c; primera = False
         trans.append(("Andrés", msg_user)); trans.append(("Agente", resp))
-        msg_user, c = llamar(f"El asistente te dice:\n\n{resp}\n\nResponde como Andrés (o [FIN] si se ha cumplido el alcance).", sis_user, s_user, False); coste += c
+        msg_user, c = llamar(f"El asistente te dice:\n\n{resp}\n\nResponde en tu papel (o [FIN] si se ha cumplido el alcance).", sis_user, s_user, False); coste += c
         if "[FIN]" in msg_user:
             break
     salida = "\n\n".join(t for q, t in trans if q == "Agente")

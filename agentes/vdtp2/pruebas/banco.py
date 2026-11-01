@@ -12,6 +12,7 @@ Uso:
 Resultados en pruebas/resultados/<etiqueta>/ (una transcripción por caso y resumen.md).
 """
 import concurrent.futures as cf
+import os
 import json
 import re
 import subprocess
@@ -20,8 +21,9 @@ import uuid
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-INSTRUCCIONES = BASE.parent / "instrucciones.md"
-CASOS = BASE / "casos.json"
+INSTRUCCIONES = Path(os.environ.get("VDTP2_PROMPT", BASE.parent / "instrucciones.md"))
+SALIDA = Path(os.environ["VDTP2_SALIDA"]) if os.environ.get("VDTP2_SALIDA") else None
+CASOS = Path(os.environ.get("VDTP2_CASOS", BASE / "casos.json"))
 
 CLI = ["claude", "-p", "--tools", "", "--strict-mcp-config",
        "--setting-sources", "", "--output-format", "json"]
@@ -121,7 +123,7 @@ def main():
     filtro = set(sys.argv[2:])
     sistema = INSTRUCCIONES.read_text(encoding="utf-8")
     casos = [c for c in json.loads(CASOS.read_text(encoding="utf-8")) if not filtro or c["id"] in filtro]
-    carpeta = BASE / "resultados" / etiqueta
+    carpeta = (SALIDA or BASE / "resultados") / etiqueta
     carpeta.mkdir(parents=True, exist_ok=True)
     with cf.ThreadPoolExecutor(max_workers=3) as ex:
         res = sorted(ex.map(lambda c: ejecutar(c, sistema, carpeta), casos))

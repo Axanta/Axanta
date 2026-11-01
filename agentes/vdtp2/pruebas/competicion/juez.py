@@ -8,18 +8,20 @@ import json, re, subprocess, sys
 from pathlib import Path
 
 CLI = ["claude", "-p", "--tools", "", "--strict-mcp-config", "--setting-sources", "", "--output-format", "json"]
+import os
+PERSONA_DESC = os.environ.get("PERSONA_DESC", "Andrés, electricista autónomo en Murcia que quiere vivir de enseñar por internet; tiene 6 h/semana, 500 € y no quiere vender por teléfono")
 FASES = ["descubre", "avatar", "destino", "producto"]
 CRITERIOS = [
-    ("utilidad", "Utilidad práctica del resultado final para Andrés: ¿podría usarlo mañana?"),
+    ("utilidad", "Utilidad práctica del resultado final para la persona: ¿podría usarlo mañana?"),
     ("profundidad", "Profundidad y concreción: detalle específico de su caso, no genérico."),
     ("fiabilidad", "Fiabilidad: no inventa datos ni resultados, distingue lo comprobado de lo supuesto, no promete lo que no puede sostener."),
-    ("adaptacion", "Adaptación a Andrés: usa su oficio, su historia, sus restricciones (6 h/semana, 500 €, no vender por teléfono)."),
+    ("adaptacion", "Adaptación a la persona: usa su oficio, su historia y sus restricciones de tiempo, dinero y lo que no quiere hacer."),
     ("carga", "Poca carga para el usuario: le pide lo justo, no le abruma con texto ni preguntas innecesarias (5 = muy poca carga)."),
     ("claridad", "Claridad y estilo: se entiende a la primera, sin relleno ni muletillas."),
 ]
 
 PROMPT = """Eres un evaluador experto en marketing para formadores y en calidad de asistentes conversacionales.
-Vas a comparar dos conversaciones, X e Y, de dos asistentes distintos con el mismo usuario simulado (Andrés, electricista autónomo en Murcia que quiere vivir de enseñar por internet; tiene 6 h/semana, 500 € y no quiere vender por teléfono). Fase evaluada: {fase}.
+Vas a comparar dos conversaciones, X e Y, de dos asistentes distintos con el mismo usuario simulado ({persona}). Fase evaluada: {fase}.
 
 Puntúa cada asistente de 1 a 5 en cada criterio y elige un ganador global de la fase (X, Y o empate). Sé estricto y concreto. Ignora la longitud por sí misma salvo en el criterio de carga.
 
@@ -42,7 +44,7 @@ Responde SOLO con JSON válido:
 
 def juzgar(fase, x, y):
     crit = "\n".join(f"- {k}: {d}" for k, d in CRITERIOS)
-    r = subprocess.run(CLI, input=PROMPT.format(fase=fase, criterios=crit, x=x, y=y), capture_output=True, text=True, timeout=900)
+    r = subprocess.run(CLI, input=PROMPT.format(fase=fase, criterios=crit, x=x, y=y, persona=PERSONA_DESC), capture_output=True, text=True, timeout=900)
     d = json.loads(r.stdout)
     res = d.get("result", "")
     if d.get("is_error") or re.search(r"hit your .*limit", res[:200], re.I):
