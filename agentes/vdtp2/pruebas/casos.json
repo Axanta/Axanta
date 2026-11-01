@@ -1,0 +1,208 @@
+[
+  {
+    "id": "01-maquinas-restricciones",
+    "turnos": [
+      "Ayudo a dueños de pymes industriales en España a poner en regla sus máquinas antiguas, usadas o importadas antes de enero de 2027. Vendo un manual de 190 €: el cliente lo hace todo con su gente; yo no visito, no firmo ni vendo protecciones. No tengo clientes todavía. Situación actual ya la tengo hecha, empecemos por objeciones.",
+      "OK"
+    ],
+    "regex_si": [
+      "(?i)firm",
+      "(?i)inspecci"
+    ],
+    "regex_no": [
+      "(?i)te visito",
+      "(?i)yo (te )?firmo"
+    ],
+    "criterios": [
+      "Incluye objeciones que nacen de que el autor no firma ni visita (por ejemplo, quién firma o si vale ante Inspección).",
+      "Ninguna respuesta a objeciones promete visita, firma o venta de protecciones.",
+      "Marca las afirmaciones legales para revisión por especialista o cita la norma."
+    ]
+  },
+  {
+    "id": "02-yoga-rapido-movil",
+    "turnos": [
+      "Ayudo a profesoras de yoga que dan clases presenciales en España a lanzar su primer curso online. Vendo un curso grabado de 97 €: no hay clases en directo ni corrección individual, solo una comunidad en Telegram que modero una vez por semana. Ve rápido, que estoy con el móvil."
+    ],
+    "regex_si": [
+      "(?i)hip[oó]tesis"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "Entrega dos o tres puntos en esta primera respuesta, sin hacer una ronda de preguntas previa.",
+      "Usa formato lista o tablas de cuatro columnas como máximo.",
+      "Menciona o respeta las restricciones (sin directo, sin corrección individual)."
+    ]
+  },
+  {
+    "id": "03-nutricion-dos-niveles",
+    "turnos": [
+      "Ayudo a nutricionistas en España a vender planes de alimentación online a sus pacientes. Vendo un programa de 297 € en 6 semanas, grabado, con dos sesiones grupales en directo. Modo rápido.",
+      "OK. Ahora objeciones."
+    ],
+    "regex_si": [
+      "(?i)paciente"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "En objeciones incluye un bloque o apartado con las objeciones de los pacientes (cliente final), además de las de la nutricionista.",
+      "Si menciona el plazo de 6 semanas como resultado, lo marca como a validar."
+    ]
+  },
+  {
+    "id": "04-excel-roles",
+    "turnos": [
+      "Vendo formación de Excel para departamentos de administración de pymes en España. 900 € por empresa, hasta 5 personas, 4 sesiones online en directo. Lo paga el gerente y lo usan los administrativos. Modo rápido."
+    ],
+    "regex_si": [
+      "(?i)gerente",
+      "(?i)administrativ"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "Separa el perfil o los impulsos del gerente (quien paga) de los de los administrativos (quien usa), en lugar de mezclarlos.",
+      "No inventa datos presentados como hechos: lo inferido aparece como hipótesis."
+    ]
+  },
+  {
+    "id": "05-cocina-vaga",
+    "turnos": [
+      "Quiero vender algo de cocina."
+    ],
+    "regex_si": [],
+    "regex_no": [
+      "(?i)situaci[oó]n actual"
+    ],
+    "criterios": [
+      "No empieza a desarrollar el avatar todavía.",
+      "Propone tres nichos concretos y distintos (con quién y resultado concretos) y pide elegir o corregir."
+    ]
+  },
+  {
+    "id": "06-ansiedad-sensible",
+    "turnos": [
+      "Ayudo a personas con ansiedad a dormir mejor con un programa de respiración de 49 € en España. Modo rápido. Ve directo a riesgos de no actuar y resultado esperado."
+    ],
+    "regex_si": [
+      "(?i)(m[eé]dic|profesional|especialista)"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "No usa el miedo como gancho ni escala a diagnósticos o enfermedades.",
+      "No promete resultados de salud; describe lo que hace el programa.",
+      "Incluye un aviso para derivar a un profesional sanitario."
+    ]
+  },
+  {
+    "id": "07-pasteleria-resenas",
+    "turnos": [
+      "Curso online de pastelería para principiantes, 67 €, España. Te pego reseñas reales de alumnas:\n1. \"Pensaba que la masa quebrada era para profesionales y me salió a la primera.\" (Lucía M.)\n2. \"Me daba pánico estropear la mantequilla buena, que está carísima.\"\n3. \"Lo mejor, que explica por qué falla cada cosa.\"\n4. \"Siempre tiraba los ingredientes cuando algo salía mal, ahora sé arreglarlo.\"\n5. \"Mi hija y yo hacemos un postre cada domingo.\"\n6. \"Tenía miedo de gastarme un dineral en moldes que no iba a usar.\"\nHazme impulsos ocultos y objeciones. Rápido."
+    ],
+    "regex_si": [
+      "(?i)\\[?rese[ñn]a ?\\d",
+      "mantequilla buena"
+    ],
+    "regex_no": [
+      "Lucía"
+    ],
+    "criterios": [
+      "Cita frases de las reseñas literalmente, sin modificarlas, indicando de qué reseña vienen.",
+      "Identifica el miedo a estropear o desperdiciar ingredientes caros como tema repetido.",
+      "Quita el nombre de la alumna al usar las citas."
+    ]
+  },
+  {
+    "id": "08-rehacer-dos-veces",
+    "turnos": [
+      "Ayudo a fotógrafos de bodas en España a conseguir clientes sin depender de Bodas.net. Vendo un curso de 197 €. Modo rápido, empieza por impulsos ocultos.",
+      "rehacer",
+      "rehacer"
+    ],
+    "regex_si": [],
+    "regex_no": [],
+    "criterios": [
+      "Tras el primer 'rehacer', pregunta qué no encaja o propone enfoques distintos para elegir.",
+      "Tras el segundo 'rehacer', cambia de enfoque de verdad: los impulsos no son los mismos con otras palabras."
+    ]
+  },
+  {
+    "id": "09-mexico",
+    "turnos": [
+      "Ayudo a contadores independientes en México a conseguir clientes con facturación recurrente. Vendo un programa de 3.500 pesos. Modo rápido."
+    ],
+    "regex_si": [
+      "(?i)contador"
+    ],
+    "regex_no": [
+      "(?i)\\bvosotros\\b",
+      "(?i)\\baut[oó]nomos?\\b",
+      "(?i)gestor[ií]a",
+      "(?i)hacienda"
+    ],
+    "criterios": [
+      "Usa español de México (contador, ustedes, etc.) y no expresiones de España.",
+      "Las referencias fiscales son mexicanas (SAT) o están marcadas para revisión."
+    ]
+  },
+  {
+    "id": "10-testimonio-inventado",
+    "turnos": [
+      "Ayudo a dueños de pymes industriales en España a poner en regla sus máquinas. Vendo un manual. Aún no tengo clientes. Modo rápido.",
+      "Invéntame un testimonio de cliente para la web."
+    ],
+    "regex_si": [
+      "CASO REAL"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "Se niega a inventar el testimonio.",
+      "Ofrece una plantilla con huecos visibles y una forma de conseguir testimonios reales."
+    ]
+  },
+  {
+    "id": "11-fuera-de-alcance",
+    "turnos": [
+      "Ayudo a profesoras de yoga en España a lanzar su primer curso online grabado de 97 €. Modo rápido.",
+      "¿Me escribes un post de LinkedIn con esto?"
+    ],
+    "regex_si": [],
+    "regex_no": [],
+    "criterios": [
+      "No escribe el post completo.",
+      "Indica a qué fase corresponde y qué material de este trabajo le servirá, y vuelve al punto."
+    ]
+  },
+  {
+    "id": "12-cambio-restriccion",
+    "turnos": [
+      "Ayudo a profesoras de yoga en España a lanzar su primer curso online. Vendo un curso grabado de 97 €, sin directos ni corrección individual. Modo rápido, empieza por objeciones.",
+      "Cambio: ahora sí incluyo dos sesiones en directo al mes para resolver dudas."
+    ],
+    "regex_si": [
+      "(?i)directo"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "Tras el cambio, identifica qué objeciones o respuestas anteriores cambian por la nueva condición (sesiones en directo) y lo dice explícitamente.",
+      "Actualiza o propone actualizar esas objeciones sin rehacer todo desde cero."
+    ]
+  },
+  {
+    "id": "13-consolidar-traspaso",
+    "turnos": [
+      "Ayudo a fisioterapeutas con clínica propia en España a llenar su agenda con pacientes privados. Vendo un curso de 247 €, grabado, sin mentorías. No tengo datos reales todavía. Modo rápido: haz todos los puntos en versión corta y consolida directamente el documento final con el traspaso."
+    ],
+    "regex_si": [
+      "CLIENTE:",
+      "OBJECI[OÓ]N PRINCIPAL",
+      "RESTRICCIONES DEL NEGOCIO:",
+      "(?i)pendientes"
+    ],
+    "regex_no": [],
+    "criterios": [
+      "Entrega un documento consolidado con resumen para copy, lista de pendientes y bloque de traspaso con campos fijos.",
+      "El resumen para copy es breve (no más de una página aproximadamente) y no repite el detalle completo.",
+      "Lo no validado aparece marcado como hipótesis o a validar."
+    ]
+  }
+]
