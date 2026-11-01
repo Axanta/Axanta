@@ -36,6 +36,17 @@ ANTITESIS = re.compile(r"\bno (es|son|tienes|necesitas) [^.\n|]{1,40}[,;:] ?(es|
 
 
 def llamar(prompt, sistema=None, sesion=None, nueva=True):
+    import time
+    for i in range(8):
+        try:
+            return _llamar(prompt, sistema, sesion, nueva)
+        except RuntimeError as e:
+            if i == 7 or not re.search(r"limit|overloaded|vac", str(e), re.I):
+                raise
+            time.sleep(min(1800, 120 * 2 ** i))
+
+
+def _llamar(prompt, sistema=None, sesion=None, nueva=True):
     cmd = list(CLI)
     if sistema:
         cmd += ["--system-prompt", sistema]
@@ -49,7 +60,7 @@ def llamar(prompt, sistema=None, sesion=None, nueva=True):
             raise RuntimeError(f"Error del CLI: {res[:200]}")
         return res, d.get("total_cost_usd", 0.0)
     except json.JSONDecodeError:
-        raise RuntimeError(f"Error del CLI: {r.stdout[-300:]} {r.stderr[-300:]}")
+        raise RuntimeError(f"Error del CLI (respuesta vacía, posible limit): {r.stderr[-300:]}")
 
 
 def columnas_max(texto):

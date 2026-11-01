@@ -45,7 +45,10 @@ def _llamar(prompt, sistema=None, sesion=None, nueva=True):
     if sesion:
         cmd += (["--session-id", sesion] if nueva else ["--resume", sesion])
     r = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=900)
-    d = json.loads(r.stdout)
+    try:
+        d = json.loads(r.stdout)
+    except json.JSONDecodeError:
+        raise RuntimeError(f"respuesta vacía, posible limit: {r.stderr[-200:]}")
     res = d.get("result", "")
     if d.get("is_error") or re.search(r"hit your .*limit|rate limit|overloaded", res[:200], re.I):
         raise RuntimeError(f"Error del CLI: {res[:200]}")
