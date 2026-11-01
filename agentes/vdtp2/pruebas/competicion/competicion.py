@@ -19,7 +19,25 @@ FASES = [
 ]
 
 
-def llamar(prompt, sistema=None, sesion=None, nueva=True):
+def llamar(prompt, sistema=None, sesion=None, nueva=True, intentos=8):
+    import time
+    for i in range(intentos):
+        try:
+            return _llamar(prompt, sistema, sesion, nueva)
+        except RuntimeError as e:
+            if i == intentos - 1 or not re.search(r"limit|overloaded", str(e), re.I):
+                raise
+            print(f"  esperando por límite ({e}); reintento {i+1}", flush=True)
+            time.sleep(min(1800, 120 * 2 ** i))
+            nueva = False if sesion and _existe(sesion) else nueva
+
+
+_creadas = set()
+def _existe(sesion):
+    return sesion in _creadas
+
+
+def _llamar(prompt, sistema=None, sesion=None, nueva=True):
     cmd = list(CLI)
     if sistema:
         cmd += ["--system-prompt", sistema]
@@ -30,6 +48,8 @@ def llamar(prompt, sistema=None, sesion=None, nueva=True):
     res = d.get("result", "")
     if d.get("is_error") or re.search(r"hit your .*limit|rate limit|overloaded", res[:200], re.I):
         raise RuntimeError(f"Error del CLI: {res[:200]}")
+    if sesion:
+        _creadas.add(sesion)
     return res, d.get("total_cost_usd", 0.0)
 
 
@@ -58,6 +78,12 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     previo, total = "", 0.0
     for (nombre, mt, alcance), sistema in zip(FASES, prompts):
+        hecho = out / f"{nombre}.json"
+        if hecho.exists():
+            d = json.loads(hecho.read_text(encoding="utf-8"))
+            previo = "\n\n".join(t for q, t in d["trans"] if q == "Agente")
+            print(f"{etiqueta} {nombre}: ya hecha, se reutiliza", flush=True)
+            continue
         trans, salida, coste = fase(nombre, mt, alcance, sistema, previo)
         total += coste
         md = [f"# {etiqueta} · {nombre}\n"] + [f"### {q}\n\n{t}\n" for q, t in trans]

@@ -1,0 +1,247 @@
+# vdtp2 · descubre
+
+### Andrés
+
+Buenas. Soy Andrés, electricista en Murcia. Busco una idea para sacarme un dinero extra con lo que sé de placas solares, sin tener que estar siempre subido al tejado.
+
+### Agente
+
+Buenas, Andrés. Buen punto de partida: saber de placas solares y querer sacarle partido sin tanto tejado.
+
+Antes de proponerte nada necesito entender tu situación. Empiezo por dos preguntas:
+
+1. **¿Cómo estás ahora mismo de trabajo?** ¿Eres autónomo, trabajas por cuenta ajena, tienes tu propia empresa de instalaciones…?
+2. **¿Cuántas horas a la semana podrías dedicarle a esto de verdad?** Las que te queden después del curro y la familia, no las ideales.
+
+### Andrés
+
+Autónomo, trabajo solo y a veces tengo un aprendiz de FP. Llevo 16 años de electricista, los últimos 6 casi todo fotovoltaica de autoconsumo y algo de domótica. Tiempo de verdad, unas 6 horas a la semana: noches y el sábado por la mañana, que tengo dos críos.
+
+### Agente
+
+Muy bien. 16 años de oficio y 6 en autoconsumo es mucha base. Y que tengas aprendiz de FP me lo apunto: ya enseñas, aunque sea en obra.
+
+Seguimos con otras dos:
+
+3. **¿Cuánto dinero podrías poner al principio** sin que te quite el sueño? Una cifra aproximada vale, aunque sea cero.
+4. **¿Qué no estás dispuesto a hacer?** Por ejemplo: salir en vídeo, hablar en directo, vender por teléfono, estar en redes a diario, atender mensajes a todas horas…
+
+### Andrés
+
+Unos 500 € al principio, más no. Vender por teléfono no, y bailes en TikTok tampoco. Salir en vídeo trabajando no me importa, ya tuve un canal de YouTube con 340 suscriptores, aunque lo dejé.
+
+### Agente
+
+Tomo nota. Que ya tuvieras un canal es útil, aunque lo dejaras: sabes grabarte y sabes lo que cuesta.
+
+Me faltan dos cosas para cerrar este primer bloque:
+
+5. **¿Qué cantidad extra al mes te cambiaría algo de verdad?** No es una meta ni una promesa. Es para saber qué tamaño de idea tiene sentido buscar.
+6. **¿Por qué dejaste el canal?** Falta de tiempo, que no crecía, que no te gustaba… Me sirve para no proponerte algo que te queme igual.
+
+### Andrés
+
+Unos 1.500 € al mes extra en un par de años, sin dejar el oficio de golpe, porque tengo la rodilla tocada y quiero subir menos a tejados. El canal lo dejé por falta de tiempo y porque no sabía para qué servía, subía vídeos de instalaciones y ya está.
+
+### Agente
+
+Lo de la rodilla tiene sentido como motivo. Buscar algo que te permita ir bajando del tejado poco a poco, sin dejar de ingresar, es un planteamiento sensato. Y lo del canal es habitual: subir vídeos sin saber a quién le hablas ni qué le resuelves cansa rápido. Aquí vamos a intentar resolver eso antes de grabar nada.
+
+**Resumen de tu punto de partida:**
+Autónomo, 16 años de electricista y 6 en fotovoltaica de autoconsumo y domótica; unas 6 h/semana (noches y sábado por la mañana) y 500 € para empezar `[dato]`. Buscas unos 1.500 €/mes extra a dos años vista, sin dejar el oficio de golpe; no vendes por teléfono ni haces bailes en TikTok, pero salir en vídeo trabajando te parece bien `[dato]`.
+
+¿Lo he recogido bien o cambiarías algo?
+
+### Andrés
+
+Sí, está bien recogido.
+
+### Agente
+
+Perfecto. Pasamos a lo que ya tienes. Tu oficio lo conozco a grandes rasgos. Ahora me interesa lo que no sale en el currículum.
+
+1. **¿Qué te preguntan una y otra vez?** Clientes antes de firmar, vecinos, familia, otros electricistas o instaladores. Las dudas que repites tanto que ya te sabes la respuesta de memoria.
+2. **¿A quién ayudas ya gratis?** Por ejemplo, el aprendiz, algún compañero que empieza con fotovoltaica, el cuñado que se quiere poner placas o gente en algún grupo o foro.
+
+### Andrés
+
+Los particulares siempre lo mismo: si les compensa poner placas y en cuánto lo amortizan. Pero lo que más me llama son otros electricistas, por la legalización del autoconsumo: la memoria técnica, el boletín, el alta en industria, la compensación de excedentes y qué hacer cuando la distribuidora no contesta. Y al aprendiz le explico todo con calma, eso me gusta.
+
+### Agente
+
+Esto es lo más interesante que has dicho hasta ahora. Que otros electricistas te pregunten por la tramitación es buena señal: les estás resolviendo un problema que les cuesta tiempo y les frena trabajos. Y que disfrutes explicándole las cosas con calma al aprendiz también pesa.
+
+**Tus 3 activos más fuertes:**
+
+1. **Dominio de la legalización del autoconsumo** `[dato]`: memoria técnica, boletín, alta en Industria, compensación de excedentes y gestión con la distribuidora cuando no contesta. Seis años haciéndolo en Murcia. Es conocimiento práctico, y lo que se aprende en obra y en ventanilla no viene en los manuales.
+2. **Saber enseñar a quien empieza** `[dato]`: lo haces ya con el aprendiz, te gusta y además ya te has grabado trabajando.
+3. **Respuesta clara a la duda del particular** `[dato]`: si le compensa y en cuánto lo amortiza. Es la pregunta con la que se decide una venta.
+
+Un apunte: parte de la tramitación cambia según la comunidad autónoma y la distribuidora `[hipótesis]`. Eso puede jugar a tu favor o limitar a quién te diriges. Lo veremos en las ideas.
+
+¿Estás de acuerdo con estos tres? Y una pregunta rápida antes de proponerte ideas: **¿tienes ya algo tuyo armado**, como plantillas de memoria, listas de comprobación o modelos de escritos para la distribuidora? ¿O lo llevas todo en la cabeza?
+
+### Andrés
+
+Sí, de acuerdo con los tres. Tengo alguna plantilla de memoria en Word y un par de escritos que le mando a la distribuidora cuando se atasca, pero lo demás lo llevo en la cabeza. Lo aprendí a base de golpes, en 2019 un trámite mal presentado me costó unos 4.000 €.
+
+### Agente
+
+Gracias por contarlo. 4.000 € por un trámite mal presentado es un golpe serio. Si en algún momento quieres usar esa historia, explica muy bien por qué tu conocimiento vale dinero. Lo decides tú. Aquí la tengo en cuenta, pero no la pongo por delante.
+
+Con lo que me has dado, estas son 5 ideas:
+
+**1 · Pack de plantillas de tramitación**
+- **Para quién:** electricistas autónomos que empiezan a montar autoconsumo y se atascan con los papeles.
+- **Problema:** pierden horas con cada expediente, dudan qué presentar y temen que se lo rechacen.
+- **Formato:** plantillas descargables (memoria técnica, escritos a la distribuidora, lista de comprobación del expediente) con un vídeo corto explicando cada una.
+- **Por qué tú:** ya tienes parte hecha y la has usado en expedientes reales.
+
+**2 · Curso corto + grupo de dudas: "Tu primera legalización sin errores"**
+- **Para quién:** el mismo electricista, pero el que quiere entender el proceso además de rellenar.
+- **Problema:** nadie le ha explicado el recorrido completo, desde el boletín hasta la compensación de excedentes.
+- **Formato:** curso grabado y una sesión en grupo al mes para resolver casos.
+- **Por qué tú:** lo explicas a diario al aprendiz, y te puedes grabar con un expediente real delante.
+
+**3 · Tramitación para otros instaladores**
+- **Para quién:** instaladores con trabajo que no quieren hacer papeles.
+- **Problema:** el papeleo les quita tiempo de obra y retrasa el cobro.
+- **Formato:** servicio por expediente: ellos instalan y tú preparas y presentas la documentación.
+- **Por qué tú:** es lo que mejor dominas, y se hace desde casa, sin tejado.
+- **Ojo:** hay que ver quién puede firmar qué cuando la instalación la hace otro `[a validar]`.
+
+**4 · Consulta para expedientes atascados**
+- **Para quién:** instaladores con un expediente parado: la distribuidora no contesta, hay un requerimiento de Industria o la compensación no se activa.
+- **Problema:** dinero retenido y un cliente final enfadado.
+- **Formato:** videollamada de pago por caso, o una cuota mensual con un número de consultas.
+- **Por qué tú:** tienes los escritos que desbloquean y has pasado por esos atascos.
+
+**5 · Guía para particulares: "¿Me compensan las placas?"**
+- **Para quién:** propietarios de vivienda en Murcia que van a pedir presupuestos.
+- **Problema:** no saben si les sale a cuenta ni comparar ofertas.
+- **Formato:** guía o minicurso barato y una hoja de cálculo sencilla.
+- **Por qué tú:** es la pregunta que más te hacen y la respondes con números reales de instalaciones.
+
+Antes de puntuarlas necesito una cosa tuya: **¿cuáles te apetecen más y cuál te da pereza solo de leerla?** Con eso relleno la parte de ilusión, que es la única que no puedo sacar de lo que ya me has contado.
+
+### Andrés
+
+La que más me apetece es la 2, el curso, porque explicar con calma es lo que me gusta, y la 1 va con ella porque las plantillas ya las tengo medio hechas. La que me da pereza es la 3: hacerle los papeles a otros es más trabajo como el de ahora y encima con responsabilidad de expedientes que no he montado yo.
+
+### Agente
+
+Tiene lógica: la 1 y la 2 van al mismo electricista y una sale de la otra. Y descartar la 3 por responsabilidad es razonable. Vamos con el filtro.
+
+**Filtro de realidad (1 a 5)**
+
+| Idea | Demanda | Ventaja | Encaje | Ilusión | Total |
+|---|---|---|---|---|---|
+| 1 · Plantillas | 3 `[a validar]` | 4 | 5 | 4 | **16** |
+| 2 · Curso + grupo | 3 `[a validar]` | 4 | 3 | 5 | **15** |
+| 3 · Tramitación para otros | 3 `[a validar]` | 5 | 2 | 1 | **11** |
+| 4 · Consulta por expediente atascado | 3 `[a validar]` | 5 | 4 | 3 `[hipótesis]` | **15** |
+| 5 · Guía para particulares | 2 `[a validar]` | 2 | 4 | 2 `[hipótesis]` | **10** |
+
+**Cómo lo he puntuado:**
+- **Demanda:** la única señal comprobada es que otros electricistas te preguntan por la tramitación `[dato]`. Sirve como pista, pero no demuestra que vayan a pagar. Por eso todas llevan `[a validar]`. A la 5 le bajo un punto porque hay mucha información gratis y muchos comparadores para particulares `[hipótesis]`.
+- **Encaje:** la 1 es la que mejor cabe en 6 h/semana y 500 €, porque ya tienes material. La 2 baja porque grabar un curso entero con ese tiempo lleva meses, y la sesión mensual es un compromiso fijo. La 3 baja por horas y por responsabilidad.
+- **Ilusión:** la 4 y la 5 no las has comentado, así que las estimo yo.
+- **Alcance:** si la tramitación cambia mucho de una comunidad a otra, centrarte solo en Murcia puede dejarte un grupo pequeño `[a validar]`. Lo comprobamos en el siguiente paso.
+
+**Mi recomendación: la 1 como punto de entrada, pensada para crecer hacia la 2.**
+Es la que puedes probar antes con tu tiempo y tu dinero, porque ya tienes la mitad hecha.
+Se dirige al mismo electricista que el curso, así que lo que aprendas vendiendo plantillas te dice qué meter en el curso.
+Y te deja la parte que te ilusiona, explicar con calma, para cuando sepas que hay gente esperándola.
+
+La decisión es tuya. ¿Te quedas con esta combinación, prefieres ir directo al curso o te llama otra?
+
+### Andrés
+
+Me quedo con esa combinación: empezar por las plantillas y luego ir al curso. Encaja con las 6 horas y los 500 €, y ya tengo parte hecha.
+
+### Agente
+
+Buena elección, y con los pies en el suelo. Ahora toca comprobar que hay gente dispuesta a pagar antes de pulir ninguna plantilla.
+
+**Comprobación de 7 días (sin crear producto)**
+
+Calculo unas 5 horas en total, para que te quepa en la semana.
+
+**1 · Hablar con 5 electricistas que hagan o quieran hacer autoconsumo** (≈2,5 h)
+Empieza por los que ya te han preguntado. Vale por teléfono, WhatsApp o en un café. No les vendas nada, solo pregunta:
+- ¿Cómo fue tu última legalización? ¿Dónde te atascaste?
+- ¿Cuánto tiempo te llevó el papeleo?
+- ¿Quién te hace la memoria? ¿Tú, una ingeniería, el almacén de material?
+- ¿Has pagado alguna vez por resolver esto (gestoría, ingeniería, curso, plantillas)?
+
+✅ **Señal buena:** 3 de 5 cuentan un atasco concreto y reciente, y ya han pagado o buscado una solución.
+❌ **Señal mala:** la mayoría dice que se lo hace gratis el almacén o una ingeniería y que no le preocupa.
+
+**2 · Mirar 3 productos parecidos** (≈1,5 h)
+Busca cursos de legalización de autoconsumo, packs de plantillas para instaladores y gestorías de tramitación. Apunta precio, qué incluyen, para qué comunidades sirven y, sobre todo, de qué se quejan en las reseñas o comentarios.
+
+✅ **Señal buena:** existen, se venden y las quejas van por "muy teórico", "no explica qué hacer con la distribuidora" o "no hay casos reales". Eso es justo lo que tú cubres.
+❌ **Señal mala:** no encuentras nada ni nadie lo busca, o la Administración ya da modelos oficiales completos y suficientes.
+
+**3 · Preguntar en un grupo de electricistas o instaladores** (≈1 h)
+Grupos de Facebook, Telegram o WhatsApp del gremio, foros de fotovoltaica o la asociación de instaladores de tu zona. Lanza una pregunta abierta, sin vender, por ejemplo: *"¿Qué parte de legalizar un autoconsumo os hace perder más tiempo?"*. Si puedes, pregunta también a gente de fuera de Murcia, para ver cuánto cambia el trámite.
+
+✅ **Señal buena:** varias respuestas con quejas concretas y alguien que te pregunta "¿tienes algo para eso?".
+❌ **Señal mala:** silencio, o respuestas tipo "eso lo hace la ingeniería y listo".
+
+Si las señales salen mixtas no pasa nada. Te dirán si ajustar el enfoque, por ejemplo hacia la idea 4 de expedientes atascados, o el alcance, solo Murcia o más zonas.
+
+¿Te ves haciendo estas tres esta semana? Si te encajan, cerramos con tu frase y el resumen para la siguiente fase.
+
+### Andrés
+
+Sí, me veo. Tengo a tres o cuatro compañeros que me llaman siempre, empiezo por ellos, y estoy en un par de grupos de WhatsApp de electricistas de la zona.
+
+### Agente
+
+Perfecto. Empezar por los que ya te llaman es lo más rápido. Dos apuntes:
+- Si te salen 3 o 4, saca el quinto del grupo de WhatsApp. Así no oyes solo a los de confianza.
+- Como son compañeros, te pueden decir lo que quieres oír. Pregúntales por lo que **hicieron** en su último expediente, no por lo que **harían** si existiera tu producto.
+
+**Tu frase:**
+
+> **"Ayudo a electricistas que empiezan con autoconsumo a legalizar sus instalaciones sin atascos ni sustos mediante plantillas probadas en expedientes reales y, más adelante, un curso práctico."**
+
+**Traspaso para la fase de cliente ideal:**
+
+```
+IDEA: Pack de plantillas de tramitación de autoconsumo para electricistas, como entrada a un curso práctico con grupo de dudas (idea 1 → idea 2).
+
+FRASE: Ayudo a electricistas que empiezan con autoconsumo a legalizar sus instalaciones sin atascos ni sustos mediante plantillas probadas en expedientes reales y, más adelante, un curso práctico.
+
+QUIÉN: Electricistas autónomos que empiezan o quieren empezar a montar autoconsumo y se atascan con la legalización. Arranque en la Región de Murcia; alcance a otras comunidades [a validar].
+
+PROBLEMA: Pierden horas en cada expediente (memoria técnica, boletín, alta en Industria, compensación de excedentes, distribuidora que no contesta), dudan qué presentar y temen rechazos que cuestan dinero.
+
+ACTIVOS DE LA PERSONA:
+- 16 años de electricista, 6 casi todo en fotovoltaica de autoconsumo y domótica [dato]
+- Dominio práctico de la legalización del autoconsumo en Murcia [dato]
+- Plantillas de memoria en Word y escritos para desbloquear a la distribuidora [dato]
+- Le gusta enseñar con calma; forma a un aprendiz de FP [dato]
+- Experiencia grabándose: canal de YouTube con 340 suscriptores, ahora parado [dato]
+- Error de tramitación en 2019 que le costó unos 4.000 € [dato] (usarlo solo si él quiere)
+
+RESTRICCIONES PERSONALES:
+- Unas 6 h/semana: noches y sábado por la mañana; dos hijos [dato]
+- Unos 500 € de inversión inicial [dato]
+- No vende por teléfono ni hace bailes en TikTok. Salir en vídeo trabajando sí [dato]
+- Sigue con el oficio; quiere reducir tejado por la rodilla [dato]
+- Objetivo orientativo: unos 1.500 €/mes extra a dos años (referencia, no previsión)
+- No quiere asumir expedientes ajenos (descartó la tramitación para otros) [dato]
+
+SEÑALES DE DEMANDA:
+- Comprobadas: otros electricistas le preguntan por la tramitación de forma recurrente [dato]
+- A validar: que paguen por plantillas o un curso; quién les hace hoy la memoria (almacén, ingeniería); productos parecidos y sus precios; cuánto cambia el trámite entre comunidades
+
+COMPROBACIÓN DE 7 DÍAS:
+1. Hablar con 5 electricistas (3–4 compañeros + 1 del grupo de WhatsApp) sobre su último expediente. Buena: 3/5 con atasco reciente y han pagado o buscado solución. Mala: se lo resuelve gratis almacén o ingeniería.
+2. Revisar 3 productos parecidos (cursos, plantillas, gestorías): precio, contenido, quejas. Buena: existen y fallan en lo práctico o en la distribuidora. Mala: no hay nada ni interés, o modelos oficiales ya suficientes.
+3. Pregunta abierta en los grupos de WhatsApp de electricistas de la zona. Buena: quejas concretas y "¿tienes algo?". Mala: silencio o "eso lo hace la ingeniería".
+```
+
+Hasta aquí llega esta fase, Andrés. Haz las tres comprobaciones y lleva los resultados a la fase de cliente ideal. Allí se concreta a quién le hablas y cómo es su día a día con los papeles. Suerte esta semana.
