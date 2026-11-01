@@ -1,0 +1,312 @@
+# VDTP-lucia · avatar
+
+### Andrés
+
+¡Hola! Soy Lucía, maestra de infantil en Valencia. Quiero convertir lo que sé de rabietas y adaptación al cole en algo que me dé un dinerillo extra cada mes.
+
+Esto es lo que salió en la fase anterior:
+
+Hola, Lucía. Vamos a descubrir de qué puedes vivir en internet partiendo de tu propia historia. Te haré unas preguntas sencillas y al final tendrás una frase que te da dirección.
+
+Ya me has dado una pista buena: rabietas y adaptación al cole. Antes de ir ahí, quiero saber desde dónde partes.
+
+¿Trabajas en un cole público, concertado o privado? ¿Y qué te ha llevado ahora a querer sacar algo propio por internet: es solo por el dinero extra o hay algo más detrás?
+
+Nueve años sin saber dónde vas a estar cada septiembre pesa mucho. Tiene sentido que lo que buscas sea tranquilidad, y los 800 € son la forma concreta de conseguirla.
+
+Dos preguntas más. ¿Qué es lo que más te frustra ahora mismo de no tener claro qué hacer con todo lo que sabes? Y si mañana ya estuvieras ganando esos 800 € con esto, ¿cómo sería un día normal tuyo?
+
+Lo que cuentas es potente: las familias ya te buscan sin que hagas nada, y 40 personas en una charla del AMPA pidiendo más es demanda real. Lo que te falta es el formato, no el interés.
+
+También me quedo con lo que no quieres: consultas a deshoras y vivir pegada al móvil.
+
+Última pregunta de este bloque. Cuando te imaginas ayudando a esas familias fuera del cole, ¿te ves más vendiendo lo que sabes (algo que preparan y consumen a su ritmo), acompañándolas de cerca o creando una comunidad de familias que se apoyan entre sí con tu guía?
+
+Te lo resumo para ver si lo he pillado:
+
+Eres maestra interina de infantil en Valencia, cansada de la incertidumbre de cada septiembre, y quieres unos 800 € al mes que te den tranquilidad. Te inclinas por vender tu conocimiento en un formato que las familias consuman a su ritmo, con 4 horas a la semana, sin consultas nocturnas y sin enseñar la cara.
+
+¿Es así?
+
+Apuntado: 300 € para invertir y 1.200 seguidores que ya son tu público. Eso es un buen punto de partida.
+
+Pasamos a tu historia. Aquí quiero entender qué hay detrás de que sepas tanto de rabietas y adaptación, más allá de la formación.
+
+¿Qué experiencia de tu vida, en el cole o fuera, marcó un antes y un después en cómo ves a los niños pequeños? Y si tuvieras que hablar de algo durante horas sin cobrar, ¿de qué sería?
+
+Eso lo cambia todo. Tú no hablas de la adaptación solo desde el aula: la viviste como madre, desde el otro lado de la puerta. Y esa frase tuya, "sin que la familia se rompa por dentro", dice mucho de lo que de verdad te importa.
+
+Dos preguntas más. ¿Qué tipo de persona es la que más te para en la puerta del cole a pedir consejo? Piensa en la que más se repite. Y de aquella época con tu hijo, ¿qué conseguiste superar tú que ves que a esas familias todavía les cuesta?
+
+Te lo devuelvo:
+
+La experiencia que te marcó fue la adaptación de tu hijo a los 3 años, que te llevó a especializarte. El tema del que podrías hablar sin parar es cómo acompañar los primeros días de cole sin que la familia se rompa por dentro. Y quien más te busca son madres primerizas de niños de 2 o 3 años, agobiadas y con mucha culpa, justo lo que tú superaste: dejar de sentirte culpable y aprender a despedirte con calma.
+
+¿Lo ves así?
+
+Bien visto. Las rabietas a esa edad van muy de la mano con la adaptación, así que caben.
+
+Con lo que me has contado, podrías ayudar a…
+
+1. **Madres primerizas que están a punto de vivir lo mismo que tú viviste con tu hijo.** Una experiencia digital para preparar la adaptación al cole de niños de 2 y 3 años: audios y vídeos con tu voz y tus manos que consumen a su ritmo durante el verano y los primeros días de septiembre.
+
+2. **Madres que se sienten culpables cada mañana en la puerta del cole.** Una experiencia digital más corta y centrada en esa transformación concreta: pasar de despedirse con culpa y lágrimas a despedirse con calma.
+
+3. **Familias con niños de 2 a 4 años que viven el día a día entre adaptación y rabietas.** Una membresía para esa comunidad de familias, con contenido nuevo cada mes que preparas el domingo por la tarde, sin consultas en directo.
+
+4. **Madres desbordadas por las rabietas de sus peques.** Una experiencia digital práctica para entender y acompañar las rabietas de los 2 a los 4 años sin perder los nervios.
+
+Son semillas, no las desarrollamos ahora.
+
+¿Cuál te ilusiona más cuando te la imaginas funcionando?
+
+Buena elección. Es tu historia y es lo que ya te piden.
+
+Esta es tu frase:
+
+**"Ayudo a madres primerizas con niños de 2 o 3 años que empiezan el cole a vivir la adaptación y despedirse con calma, sin culpa y sin que la familia se rompa por dentro."**
+
+Esta frase es tu punto de partida. No es definitiva, pero ya no estás perdida: tienes dirección.
+
+Ahora toca la siguiente fase: definir tu nicho, tu avatar y tu destino. Estás lista para eso. ¡Nos vemos allí!
+
+### Agente
+
+Hola, Lucía. Vamos a definir a tu consumidor ideal con todo detalle. Ya traes tu frase de la fase anterior, así que partimos de ahí:
+
+**"Ayudo a madres primerizas con niños de 2 o 3 años que empiezan el cole a vivir la adaptación y despedirse con calma, sin culpa y sin que la familia se rompa por dentro."**
+
+Empezamos por el primer punto.
+
+## Situación actual
+
+Tu avatar es una madre primeriza de entre 30 y 38 años, con un hijo o hija de 2 o 3 años que va a empezar el cole o lleva pocas semanas en él. Hasta ahora el peque ha estado en casa, con los abuelos o en una escoleta pequeña donde todo era más familiar. Ella trabaja fuera de casa o acaba de reincorporarse, y el cole es la pieza que tiene que encajar para que todo lo demás funcione.
+
+**Cómo vive estos días:**
+
+- **Desde agosto ya está nerviosa.** Mira la lista de material, lee el grupo de WhatsApp de la clase y empieza a imaginar la primera mañana. Duerme peor que su hijo.
+- **Las mañanas son una batalla.** El peque se le agarra a la pierna, llora, grita "mamá no te vayas". La maestra se lo tiene que despegar. Ella sale con un nudo en el estómago y muchas veces llora en el coche o de camino al trabajo.
+- **El periodo de adaptación le complica la vida.** Horario reducido, recogidas a mediodía, días de permiso que no tiene o que pide con culpa en el trabajo. Hace malabares con los abuelos y con su pareja.
+- **En el trabajo no está del todo.** Mira el móvil por si llaman del cole. Se pasa la mañana pensando si seguirá llorando.
+- **Por las tardes llega la factura.** Rabietas que antes no tenía, más apego, despertares nocturnos, vuelve a hacerse pis, no quiere comer. Ella lo interpreta como señal de que algo está haciendo mal.
+
+**Lo que siente por dentro:**
+
+- **Culpa.** Por dejarle, por trabajar, por no haberle preparado mejor, por haber tenido ganas de un rato sola.
+- **Sensación de ser la única.** Ve a otros niños entrar tan tranquilos y piensa que el suyo es el que peor lo pasa, y que eso dice algo de ella como madre.
+- **Juicio alrededor.** Su madre o su suegra le sueltan "eso es que lo tienes muy enmadrado" o "en mis tiempos no se lloraba tanto". Las otras madres de la puerta opinan. Ella se siente evaluada.
+- **Tensión en casa.** Su pareja lo vive con más distancia ("ya se le pasará"), y ella se siente sola cargando con la parte emocional. Discuten más de lo normal.
+- **Confusión.** Busca en Google e Instagram y cada cuenta dice una cosa: despedirse rápido, quedarse un rato, no despedirse, llevar un objeto de casa. Prueba de todo y nada le da tranquilidad.
+
+En resumen: está agotada, culpable y con miedo a estar haciendo daño a su hijo justo en un momento que ella esperaba que fuera bonito. Quiere que las mañanas dejen de doler y que en casa vuelva la calma.
+
+---
+
+¿Cómo lo ves?
+
+- **SÍ** para seguir.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+### Andrés
+
+SÍ. Es clavado a lo que me cuentan las madres en la puerta, y a lo que viví yo con mi hijo. Lo de llorar en el coche me ha tocado.
+
+### Agente
+
+Me alegra que te haya tocado. Esa frase del coche la vas a usar mucho.
+
+## Intentos previos
+
+Tu avatar no se ha quedado de brazos cruzados. Ha probado bastantes cosas, casi siempre por su cuenta, a deshoras y con prisa.
+
+**Lo que ha hecho para prepararle antes de empezar:**
+
+- **Hablarle del cole todo el verano.** "Vas a ir al cole de mayores, vas a tener amigos". A veces le ha generado más ansiedad al peque, que llega a septiembre con miedo a algo que no entiende.
+- **Cuentos sobre el primer día.** Ha comprado dos o tres libros infantiles de ir al cole. Al peque le gustan, pero el día de la puerta no sirven de nada.
+- **Visitar el cole y pasar por delante.** Ayuda un poco, pero el primer día la reacción es la misma.
+- **Ajustar horarios y siestas** según lo que leyó en alguna cuenta. Lo intenta, pero entre vacaciones y abuelos se le descuadra.
+
+**Lo que ha probado en la puerta:**
+
+- **Irse sin despedirse** para que no llore. Funciona un día y al siguiente el peque se pone en alerta desde que sale de casa.
+- **Despedida rápida**, como le dijeron. Se queda con la sensación de haberle abandonado.
+- **Quedarse un rato largo** para que se calme. Cuanto más se queda, peor es la separación.
+- **Objeto de casa, foto en el bolsillo, besito en la mano.** Recursos que ha visto en Instagram. Algunos ayudan a ratos, ninguno le da un plan.
+- **Premios y negociaciones.** "Si entras sin llorar, por la tarde vamos al parque". Le funciona poco y se siente mal haciéndolo.
+- **Que lo lleve otra persona.** Su pareja o la abuela. El peque entra algo mejor, pero ella se siente peor y vuelve a la casilla de salida.
+
+**Dónde ha buscado ayuda:**
+
+- **Instagram y TikTok.** Sigue varias cuentas de crianza. Guarda publicaciones que luego no vuelve a mirar. Cada cuenta le dice una cosa distinta.
+- **Google de madrugada.** "Mi hijo llora en el cole cuánto dura", "es normal que tenga rabietas desde que va al cole".
+- **La maestra, en dos minutos de puerta.** Le dice que es normal y que ya se le pasará. Ella sale igual de intranquila.
+- **La pediatra.** Respuesta parecida: es una etapa.
+- **Su madre, su suegra, otras madres.** Consejos de su época o de su caso, que a menudo vienen con juicio incluido.
+- **Algún taller o charla de crianza respetuosa**, gratis o barato. Sale motivada, pero es contenido general y no baja a su mañana concreta en la puerta.
+
+**Por qué nada le ha funcionado del todo:**
+
+- Tiene muchos trucos sueltos y ningún plan con orden, de antes del primer día a cuando ya entra tranquilo.
+- Todo lo que encuentra se centra en el niño. Nadie le ha hablado de cómo sostenerse ella, y su nerviosismo se lo transmite al peque.
+- Cada fuente contradice a la anterior, así que cambia de estrategia cada pocos días y el peque nunca encuentra una rutina estable.
+- Nadie ha estado a los dos lados de la puerta: maestra y madre. Ese hueco es justo donde entras tú.
+
+---
+
+¿Qué te parece?
+
+- **SÍ** para seguir.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+### Andrés
+
+SÍ. Lo de irse sin despedirse lo veo cada septiembre y luego el peque llega en alerta toda la semana. Y es verdad, en la puerta solo tengo dos minutos para cada madre.
+
+### Agente
+
+Esos dos minutos son tu ventaja: lo que no cabe en la puerta es justo lo que vas a ofrecer.
+
+## Impulsos ocultos
+
+Esto es lo que mueve de verdad a tu avatar y que no dice en voz alta, ni a la maestra ni muchas veces a su pareja.
+
+**1. Que la vean como buena madre.**
+Le pesa ser "la madre del niño que llora". En la puerta siente las miradas de otras familias y de la maestra. En el fondo quiere que su hijo entre tranquilo para dejar de sentirse examinada. Le da vergüenza reconocerlo porque le parece un deseo egoísta.
+
+**2. Tener la certeza de que no le está haciendo daño.**
+Su miedo más profundo es que esta etapa deje huella en su hijo, que se sienta abandonado o que el vínculo entre ellos se resienta. Lo que busca, más que trucos, es alguien con autoridad que le diga "tu hijo está bien y tú lo estás haciendo bien", y poder creérselo.
+
+**3. Recuperar un rato para ella sin sentirse culpable.**
+Necesita que el cole funcione para poder trabajar concentrada, tomarse un café sola o simplemente respirar. Tiene ganas de que llegue ese momento, y esas ganas le hacen sentirse peor madre. Nunca diría "necesito que entre bien porque yo también necesito mi espacio".
+
+**4. Demostrar que su forma de criar funciona.**
+Ha elegido acompañar, validar emociones, no usar el "no llores, que eres mayor". Su madre y su suegra lo cuestionan. Quiere que la adaptación salga bien para callar esos comentarios y confirmar que no se ha equivocado criando así.
+
+**5. Sentirse capaz otra vez.**
+En su trabajo sabe lo que hace. Con la maternidad, y sobre todo en esta etapa, se siente perdida y sin control. Quiere un plan claro que le devuelva la sensación de saber qué hacer cada mañana.
+
+**6. No cargar sola con lo emocional.**
+Le gustaría que su pareja se implicase igual, que entendiera por qué le afecta tanto. Le da rabia ser siempre ella la que se preocupa, la que lee, la que busca soluciones. Prefiere callárselo para no discutir más.
+
+**7. Vivir la maternidad que imaginó.**
+Se imaginaba el primer día de cole como algo bonito: la foto con la mochila, el peque ilusionado. La realidad la ha descolocado. Quiere recuperar esa imagen y que esta etapa tenga también momentos buenos que recordar.
+
+---
+
+¿Cómo lo ves?
+
+- **SÍ** para seguir.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+### Andrés
+
+SÍ. El 2 es el que más oigo, aunque me lo pregunten con otras palabras: "¿le estoy haciendo daño?". Y el 3 me lo han confesado alguna vez casi pidiendo perdón.
+
+### Agente
+
+Esa pregunta, "¿le estoy haciendo daño?", va a ser un hilo que vuelva a salir más adelante. Y la confesión del 3 casi pidiendo perdón dice mucho de la culpa con la que vive.
+
+## Objeciones
+
+Estas son las barreras que tiene tu avatar en la cabeza cuando piensa en pagar por ayuda con la adaptación. Algunas las dirá, otras solo las pensará.
+
+**1. "Es una etapa, ya se le pasará."**
+Se lo ha dicho la maestra, la pediatra y su madre. Una parte de ella quiere creérselo y esperar. Detrás hay miedo a exagerar y a parecer una madre ansiosa que hace un drama de algo normal.
+
+**2. "Eso ya lo encuentro gratis en Instagram."**
+Tiene la galería llena de publicaciones guardadas. Siente que la información ya está ahí y que solo le falta aplicarla. Aún no ha conectado que su problema es tener demasiados consejos sueltos y ninguno ordenado para su caso.
+
+**3. "No tengo tiempo para un curso."**
+Trabaja, recoge a mediodía, hace cenas, baños y acuesta al peque. La idea de sentarse a ver vídeos le agobia. Teme comprar algo y no terminarlo, y sumar otra culpa más.
+
+**4. "Mi hijo es distinto, a él no le va a servir."**
+Piensa que su peque es más sensible, más apegado o más cabezota que los demás, y que un método general no encaja con él. Le ha pasado con otros consejos.
+
+**5. "Si necesito pagar para esto, es que no sé ser madre."**
+Esta casi nunca la dice. Pedir ayuda le confirma su mayor miedo: que no está a la altura. Prefiere seguir apañándose sola antes que reconocerlo.
+
+**6. "Ya es tarde" o "aún falta mucho".**
+En junio le parece pronto para preocuparse. En octubre piensa que ya ha pasado lo peor y que no merece la pena. El momento nunca le parece el bueno.
+
+**7. "Ya nos hemos gastado mucho."**
+Matrícula, uniforme, material, comedor, quizá guardería antes. Gastar más en algo "emocional" le cuesta justificarlo, sobre todo ante su pareja.
+
+**8. "Mi pareja va a decir que es tirar el dinero."**
+Él piensa que no hace falta tanto, que el niño se adapta solo. Ella no quiere otra discusión, así que muchas veces ni lo plantea.
+
+**9. "¿Quién es esta persona y por qué me iba a ayudar?"**
+Como no vas a enseñar la cara, necesita otras señales para confiar: tu experiencia como maestra, tu historia como madre, tu forma de hablar. Si no las ve rápido, desconfía.
+
+**10. "¿Y si lo hago y el cole o la maestra dicen otra cosa?"**
+Le preocupa que lo que aprenda choque con lo que le pida la maestra de su hijo y quedar en medio. Contigo esto pesa menos porque hablas desde dentro del aula, pero ella todavía no lo sabe.
+
+---
+
+¿Qué te parece?
+
+- **SÍ** para seguir.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+### Andrés
+
+SÍ. La 6 la veo cada año: en junio nadie pregunta y en octubre me dicen "ya se le pasará". Y la 9 me preocupa un poco, porque sin cara tendré que contar bien quién soy.
+
+### Agente
+
+La 9 la vamos a trabajar cuando hablemos de ti como comunicadora. Tu doble mirada, maestra y madre, te da mucho que contar aunque no salga tu cara.
+
+Lo de la 6 te da una pista de calendario muy útil para más adelante: tu avatar está más receptiva en agosto y en las dos primeras semanas de septiembre.
+
+## Nivel del avatar
+
+Tu avatar está en un **nivel principiante**, con un matiz importante: es una principiante con mucha información suelta.
+
+**Por qué es principiante:**
+
+- **Es su primera vez.** Es madre primeriza y nunca ha vivido una adaptación al cole desde dentro. No sabe qué es normal y qué no, cuánto dura, qué señales indican que va bien.
+- **No entiende el porqué.** Sabe que su hijo llora, pero no entiende qué está pasando por dentro del peque a los 2 o 3 años: el apego, la separación, por qué las rabietas aparecen por la tarde en casa y no en el aula.
+- **No tiene un plan.** Actúa a base de reacción: lo que le funcionó ayer, lo último que leyó, lo que le dijo su madre.
+- **No sabe gestionar su propia emoción.** No ha pensado que su nerviosismo influye en cómo entra su hijo, ni tiene recursos para calmarse ella antes de la despedida.
+
+**El matiz: tiene ruido, no un vacío.**
+
+- Ha consumido bastante contenido de crianza en redes. Conoce palabras como "apego", "validar emociones" o "crianza respetuosa", pero de forma superficial.
+- Sabe trucos sueltos: objeto de transición, despedida corta, cuentos. No sabe cuándo usar cada uno ni en qué orden.
+- Esto la hace sentir que "ya debería saberlo", y por eso se frustra más cuando no le funciona.
+
+**Qué implica para ti:**
+
+- Hay que hablarle claro, sin tecnicismos y sin dar nada por sabido.
+- Necesita orden y pasos concretos, más que más información.
+- Le sirve mucho que le expliques el porqué de las cosas en lenguaje sencillo, porque entenderlo le quita culpa.
+- Cada pequeño avance tiene que ser visible para ella, para que gane confianza rápido.
+
+---
+
+¿Lo ves así?
+
+- **SÍ** para seguir.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+### Andrés
+
+SÍ. Lo de "ya debería saberlo" lo noto mucho, me preguntan casi disculpándose porque han leído de todo y aun así no les sale.
+
+### Agente
+
+Esa disculpa al preguntar resume todo el perfil: ha leído de todo, cree que debería saberlo y le da apuro necesitar ayuda.
+
+Con esto queda cerrado tu avatar ideal. Te dejo lo validado en limpio:
+
+- **Situación actual:** madre primeriza de 30 a 38 años, con un peque de 2 o 3 años empezando el cole. Mañanas de llanto en la puerta, ella llorando en el coche, tardes de rabietas y regresiones, culpa, juicio familiar, tensión con la pareja y consejos contradictorios.
+- **Intentos previos:** cuentos, irse sin despedirse, despedida rápida, quedarse más rato, objetos de transición, premios, Instagram, Google de madrugada y dos minutos con la maestra. Muchos trucos sueltos, ningún plan, y nadie le ha ayudado a sostenerse a ella.
+- **Impulsos ocultos:** que la vean como buena madre, saber que no le está haciendo daño, tener un rato para ella sin culpa, demostrar que su forma de criar funciona, sentirse capaz, no cargar sola con lo emocional y vivir la maternidad que imaginó.
+- **Objeciones:** "ya se le pasará", "lo tengo gratis en Instagram", falta de tiempo, "mi hijo es distinto", "pagar significa que no sé ser madre", el momento nunca es el bueno, gasto acumulado, la pareja y la confianza en alguien que no enseña la cara.
+- **Nivel:** principiante con mucha información suelta. Necesita orden, el porqué de las cosas y avances visibles.
+
+El siguiente paso es trabajar tu identidad como guía, y para eso tengo que consultar el método antes de proponerte nada. Ahora mismo no puedo hacerlo: tu acceso ya no está activo. Cuando lo tengas activo de nuevo, retomamos desde **Identidad del guía** con todo lo anterior ya cerrado.

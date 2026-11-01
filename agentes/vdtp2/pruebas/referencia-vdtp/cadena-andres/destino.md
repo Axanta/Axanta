@@ -1,0 +1,258 @@
+# VDTP · destino
+
+### Andrés
+
+¡Buenas! Soy Andrés, electricista en Murcia, y busco la manera de sacarme un dinero extra con lo que sé de placas solares sin tener que estar siempre subido al tejado.
+
+Esto es lo que salió en la fase anterior:
+
+ le dice qué hacer el lunes con el expediente de la señora Carmen.
+
+**Lo que tienen en común todos estos intentos**
+
+Le han dado trozos sueltos del proceso, sin orden, sin actualización y sin nadie que le explique el porqué de cada paso. Le falta alguien que haya pasado por los mismos golpes, que conozca el terreno real de la tramitación y que se lo cuente de principio a fin, con calma y en lenguaje de electricista.
+
+---
+
+¿Cómo lo ves?
+
+- **SÍ** para seguir con Impulsos ocultos.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+Lo del expediente copiado es oro. Lo usaremos más adelante.
+
+### Punto 3 · Impulsos ocultos
+
+En voz alta tu avatar dice cosas como "quiero aprender a tramitar bien" o "a ver si me quito el papeleo de encima". Por debajo le mueven estas urgencias, que no confiesa ni en el grupo de WhatsApp ni en casa.
+
+**1. Recuperar el orgullo de ser el que sabe**
+
+Lleva veinte años siendo el profesional al que se le pregunta. Ahora un formulario de la distribuidora le hace sentir torpe, y eso le escuece más de lo que admite. Quiere volver a sentirse dueño de su oficio entero, también del papel. Que nadie le pille en un renuncio.
+
+**2. Ser él a quien llaman los demás**
+
+Le da apuro llamar siempre al mismo compañero. En el fondo le gustaría estar al otro lado del teléfono: ser el que resuelve, el que explica, el que en el gremio tiene fama de saber legalizar. Ese reconocimiento entre iguales le importa mucho, aunque jamás lo diría.
+
+**3. Mirar al cliente a la cara con seguridad**
+
+Lo que más le duele es la llamada del cliente preguntando por la compensación y tener que inventarse una excusa. Desea poder decir "su expediente está en este punto, le llegará en tal plazo" sin titubear. Quiere conservar esa imagen de electricista de confianza que tanto le ha costado construir.
+
+**4. Dejar de financiar a todo el mundo**
+
+Pone el material, la mano de obra y la espera, y cobra el último. Odia sentir que trabaja gratis durante meses. Desea cobrar al terminar, tener la caja tranquila y dejar de mirar la cuenta del banco con angustia a final de mes.
+
+**5. Ganar más por cada instalación**
+
+Ve que la ingeniería o el tramitador se lleva un dinero que podría quedarse él. Sueña con cobrar la legalización como parte de su servicio, subir precios con argumentos y ganar en cada obra lo que le corresponde por todo el trabajo.
+
+**6. Recuperar sus tardes y sus domingos**
+
+Le pesa la mirada de su pareja cuando abre el portátil después de cenar y se pierde otra tarde con sus hijos. Desea cerrar la furgoneta el viernes y desconectar de verdad, sin un expediente pendiente rondándole la cabeza.
+
+**7. No quedarse atrás frente a las empresas grandes**
+
+Ve a las instaladoras con departamento de ingeniería y equipo comercial quedándose con el mercado. Le da miedo convertirse en el electricista de pueblo que ya no cuenta para la solar. Desea competir de tú a tú, con la ventaja de su cercanía y su buen trabajo.
+
+**8. Construir algo que no dependa solo de su cuerpo**
+
+Este pocos lo dicen, pero casi todos lo piensan. Saben que no se van a pasar la vida subiendo a tejados. Desean que la solar sea la base para crecer: contratar a alguien que monte mientras ellos llevan la parte técnica y la tramitación, o tener una línea de trabajo más de despacho cuando el cuerpo pida parar.
+
+**9. Tener la cabeza tranquila**
+
+Debajo de todo hay un deseo simple: dejar de vivir con la sensación de que algo se le escapa. Saber que cada expediente que presenta va bien hecho, dormir sin el runrún de "a ver si este me lo rechazan" y sentir que tiene el control de su negocio.
+
+---
+
+¿Cómo lo ves?
+
+- **SÍ** para seguir con Objeciones.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+Esos dos impulsos los compartes con tu avatar, y eso se va a notar cuando le hables.
+
+### Punto 4 · Objeciones
+
+Son las frases que tu avatar se dice para no dar el paso. Algunas las suelta en voz alta; otras solo se las piensa.
+
+**1. "Esto cambia cada dos por tres. Lo que aprenda hoy no me sirve en seis meses."**
+
+Ha visto cambiar normativas, plataformas y requisitos de la distribuidora de un año para otro. Teme pagar por algo que se quede viejo enseguida. Por debajo hay miedo a invertir tiempo y dinero en terreno movedizo.
+
+**2. "Cada comunidad y cada distribuidora es un mundo. Lo que vale en Murcia no vale aquí."**
+
+Es la objeción más fuerte para un electricista de fuera de tu zona. Ya le pasó con los vídeos de YouTube. Necesita ver que el proceso tiene una lógica común y que sabrá adaptarlo a su caso.
+
+**3. "Ya he pagado cursos y no me sirvieron de nada."**
+
+Viene escaldado del curso de montaje que despachó la tramitación en media hora y de los webinars que no respondían a lo que preguntaba. Desconfía de cualquier formación que suene a más de lo mismo.
+
+**4. "No tengo tiempo. Bastante tengo con las obras."**
+
+Llega reventado a casa, y lo poco que le sobra son esas noches que ya le roba el papeleo. Ponerse a "hacer un curso" le suena a otra carga más, cuando lo que busca es quitarse cargas.
+
+**5. "Para eso le pago a la ingeniería y me olvido."**
+
+Es su salida cómoda. Prefiere perder margen antes que meterse en algo que no domina. No ha echado cuentas de lo que le cuesta al año ni de lo que depende de otros.
+
+**6. "Yo lo que necesito es que me lo hagan, no que me lo enseñen."**
+
+Con el agua al cuello, quiere que alguien le saque el expediente atascado de esta semana. Le cuesta ver el valor de aprender cuando tiene tres clientes llamándole.
+
+**7. "Eso lo pregunto en el grupo y me lo dicen gratis."**
+
+Aunque sabe que en el grupo cada uno dice una cosa, la gratuidad le tira. Pagar por información le parece raro cuando cree que "está todo en internet".
+
+**8. "¿Y este quién es? Otro electricista como yo."**
+
+Está harto de gurús y vendedores de cursos. Le cuesta pagar a un compañero de oficio, y a la vez desconfía de quien no ha pisado un tejado. Necesita ver que quien le enseña ha sufrido lo mismo y lo resuelve en su día a día.
+
+**9. "Me da apuro reconocer que no sé esto."**
+
+Después de veinte años de oficio, apuntarse a una formación sobre papeleo le parece admitir una carencia. Su orgullo profesional le frena. Prefiere ir tirando antes que sentirse otra vez alumno.
+
+**10. "Ahora no es buen momento, tengo dinero pillado."**
+
+Con varias instalaciones pendientes de cobro, cualquier gasto le parece un lujo. La paradoja es que ese dinero lo tiene parado justo por no saber tramitar.
+
+**11. "Para las pocas instalaciones que hago al año, no me compensa."**
+
+Si monta pocas, piensa que no le sale a cuenta aprender. No ve que una sola instalación atascada ya le cuesta más que la formación, y que si tramitara bien podría aceptar más trabajos.
+
+**12. "Si lo firmo yo y sale mal, la responsabilidad es mía."**
+
+Le da miedo poner su firma en documentos que no entiende del todo. Que lo firme otro le da una falsa sensación de seguridad.
+
+**13. "¿Y si la solar se acaba? Ya no hay tantas ayudas."**
+
+Ha oído que el boom se ha enfriado y duda de si merece la pena especializarse ahora. Teme invertir en una moda que se desinfla.
+
+**14. "No me apaño con el ordenador ni con las plataformas online."**
+
+Muchos llevan mejor el destornillador que el ratón. Les echa para atrás imaginarse en una plataforma con contraseñas, módulos y vídeos. Temen perderse antes de empezar.
+
+---
+
+¿Cómo lo ves?
+
+- **SÍ** para seguir con Nivel del avatar.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+Esas dos las tendrás que desmontar con ejemplos concretos. Ya las tenemos apuntadas.
+
+### Punto 5 · Nivel del avatar
+
+**Nivel: intermedio.**
+
+Tu avatar tiene un perfil desigual: es muy bueno en unas cosas y flojo en otras. Eso define cómo tienes que hablarle.
+
+**Lo que domina (avanzado)**
+
+- **El oficio eléctrico.** Instalador habilitado, con años de boletines, cuadros, reformas y averías. Conoce el reglamento de baja tensión, sabe de protecciones, secciones y puestas a tierra. No necesita que le expliques qué es un diferencial.
+- **El trato con el cliente de a pie.** Sabe presupuestar, negociar y ganarse la confianza de un particular. Su negocio vive de eso.
+
+**Lo que sabe a medias (intermedio)**
+
+- **El montaje fotovoltaico.** Dimensiona, elige paneles e inversor, monta estructura y conecta. Lo hace bien, aunque a veces tira de lo que le recomienda el distribuidor de material.
+- **La tramitación.** Ha sacado algún expediente adelante, a base de prueba y error, de copiar plantillas y de llamar a compañeros. Conoce los nombres de los trámites, pero no tiene claro el orden, ni el porqué de cada documento, ni qué hacer cuando le llega un requerimiento. Sabe que existen la memoria técnica, el registro en industria, el acceso y conexión y la compensación de excedentes, pero no sabe cómo encajan entre sí.
+
+**Lo que flojea (principiante)**
+
+- **La normativa de autoconsumo y su letra pequeña.** Modalidades, compensación simplificada, papel de cada actor. Le suena todo, pero no lo sabría explicar.
+- **La relación con la distribuidora.** No sabe qué canales funcionan, qué plazos son normales ni cómo reclamar con eficacia.
+- **El manejo digital.** Va justo con plataformas, firma electrónica y gestión de documentos. Lo saca adelante, pero con esfuerzo y sin sistema.
+- **La gestión del negocio.** No controla bien cuánto le cuesta cada expediente atascado ni cuánto margen pierde con la ingeniería.
+
+**Quién se queda fuera**
+
+- **El principiante total**: quien no es instalador habilitado o acaba de empezar en el oficio. Le faltan las bases y tu formación le quedaría grande.
+- **El avanzado**: la ingeniería o la instaladora grande con departamento técnico que ya tramita a diario. A ellos les sobraría casi todo.
+
+**Qué implica para cómo le enseñas**
+
+- Le hablas de igual a igual, de electricista a electricista. Nada de explicarle lo básico del oficio, que se sentiría tratado como un aprendiz.
+- Vas directo a lo que le falta: el orden del proceso, el porqué de cada paso y qué hacer cuando algo se tuerce.
+- Usas casos reales y errores concretos, como tu 2019 o los expedientes copiados que te traen rechazados. Es como mejor aprende alguien que ya tiene oficio.
+- Le das herramientas que pueda usar al día siguiente: listas de comprobación, documentos tipo explicados y pasos claros. Así resuelves de paso la objeción de "que me lo hagan".
+- Cuidas mucho la parte digital: vídeos sencillos y una plataforma fácil, para que la tecnología no le eche para atrás.
+
+---
+
+¿Cómo lo ves?
+
+- **SÍ** para cerrar el bloque 1 y pasar al bloque 2, donde hablamos de ti como comunicador.
+- **NO** para que lo rehaga.
+- O escribe tu propio texto si prefieres describirlo tú.
+
+Apuntado. Ese tono de igual a igual lo vamos a necesitar en el siguiente bloque.
+
+Con esto queda cerrado y validado el bloque 1:
+
+- **Situación actual**: electricista autónomo con años de oficio convencional, metido en la solar, con instalaciones sin legalizar, dinero retenido y noches con el portátil.
+- **Intentos previos**: cursos de montaje, webinars, YouTube, grupos de WhatsApp, centralitas, expedientes copiados, software, ingenierías y normativa leída a solas.
+- **Impulsos ocultos**: orgullo de ser el que sabe, ser a quien llaman, seguridad ante el cliente, cobrar a tiempo, más margen, tardes libres, competir con los grandes, no depender del cuerpo y tener la cabeza tranquila.
+- **Objeciones**: catorce frenos, con "lo pregunto en el grupo gratis" y "que me lo hagan" como los más frecuentes.
+- **Nivel**: intermedio. Avanzado en oficio, a medias en montaje y tramitación, flojo en normativa, distribuidora y gestión digital.
+
+Para seguir con el bloque 2 tengo que consultar el método en el punto de Identidad del guía, y ahora mismo esa consulta no me devuelve nada. No voy a seguir de memoria.
+
+Parece que tu acceso ya no está activo. Revísalo y, en cuanto vuelva a funcionar, retomamos aquí mismo con Identidad del guía. Lo trabajado hasta ahora queda guardado arriba.
+
+### Agente
+
+Hola, te voy a ayudar a crear un Destino simple y atractivo.
+
+Con lo que traes de la fase anterior ya tengo lo que necesito. Enseñas a electricistas autónomos con oficio a tramitar y legalizar sus instalaciones de autoconsumo. Así cobran antes, se quedan el margen de la ingeniería y dejan de pasar las noches con el portátil.
+
+Estas son mis propuestas de Destino:
+
+1. Legalizar tus instalaciones solares sin depender de ingenierías
+2. Sacar tus expedientes de autoconsumo a la primera
+3. Presentar expedientes fotovoltaicos que la distribuidora no rechaza
+4. Cobrar tus instalaciones solares el mes que las terminas
+5. Ganar 400 € más por cada instalación solar
+6. Cobrar la legalización como parte de tu servicio
+7. Dejar de pagar la tramitación a la ingeniería
+8. Tramitar tus instalaciones solares sin perder las tardes
+9. Ser el electricista al que llaman para legalizar
+
+¿Cuál te encaja más?
+
+Si me dices cuánto tardas tú en legalizar una instalación y cuánto cobra de media una ingeniería por tramitarla, afino la que elijas con tus cifras reales.
+
+### Andrés
+
+Me quedo con la 2, sacar los expedientes a la primera, porque lo que a mí me costó 4.000 € en 2019 fue un trámite mal presentado. Yo ahora tardo unas 3 o 4 horas por expediente, pero al principio eran días. Una ingeniería por aquí cobra entre 300 y 500 € por tramitar una vivienda.
+
+### Agente
+
+Buena elección. Esos 4.000 € de 2019 vienen justo de un trámite mal presentado, así que ese Destino lo puedes contar desde tu propia historia.
+
+Te la afino con tus cifras:
+
+1. Sacar tus expedientes de autoconsumo a la primera
+2. Tramitar tu expediente solar a la primera en 4 horas
+3. Sacar expedientes de autoconsumo a la primera en una mañana
+4. Legalizar un autoconsumo a la primera en 4 horas
+5. Sacar tus expedientes solares a la primera sin ingeniería
+6. Sacar a la primera expedientes que antes te rechazaban
+
+Yo me quedaría con la 2. Mantiene el "a la primera", que es lo que te dolió a ti, y le suma un tiempo concreto. Un electricista que hoy pierde días con un expediente se ve ahí enseguida. Los 300-500 € de la ingeniería los dejaría fuera del Destino. Te sirven mejor como argumento cuando expliques el producto.
+
+¿Cuál te encaja?
+
+### Andrés
+
+Me quedo con la 2, "tramitar tu expediente solar a la primera en 4 horas". Es lo que tardo yo ahora, así que lo puedo enseñar con mi propio caso.
+
+### Agente
+
+Cerrado. Tu Destino:
+
+**Tramitar tu expediente solar a la primera en 4 horas**
+
+Las 4 horas son tu tiempo actual, con oficio y rodaje. Así que, cuando lo comuniques, muestra el expediente completo de principio a fin, cronometrado, y ten a mano el caso de algún alumno que ya haya bajado de días a horas. Con eso el Destino se sostiene solo.
+
+Los 4.000 € de 2019 y los 300-500 € que cobra la ingeniería guárdalos para contar tu historia y explicar el producto. El Destino ya está terminado y listo para usar.
