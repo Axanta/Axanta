@@ -1,0 +1,519 @@
+<title>Agente Villanueva</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: cuaderno de trabajo por fases. Barra de fases arriba, conversación al centro, caja de escritura fija abajo. */
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --ink:#18221f; --muted:#5b6964; --line:#d6dedb;
+  --accent:#1f6f55; --accent-ink:#ffffff; --accent-soft:#e2efe9;
+  --mark:#b8791a; --mark-soft:#f7ecd9; --warn:#a33a2a; --warn-soft:#f6e3df;
+  --user:#e8eeec;
+  --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --f-body:"Public Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111816; --surface:#18211e; --ink:#e4ece9; --muted:#9aaaa4; --line:#2c3935;
+  --accent:#5cc49c; --accent-ink:#0d1a15; --accent-soft:#1d3a30;
+  --mark:#e0a849; --mark-soft:#3a2d16; --warn:#ef8a78; --warn-soft:#3d221d;
+  --user:#22302b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111816; --surface:#18211e; --ink:#e4ece9; --muted:#9aaaa4; --line:#2c3935;
+  --accent:#5cc49c; --accent-ink:#0d1a15; --accent-soft:#1d3a30;
+  --mark:#e0a849; --mark-soft:#3a2d16; --warn:#ef8a78; --warn-soft:#3d221d;
+  --user:#22302b; color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.app{display:flex;flex-direction:column;min-height:100%}
+.wrap{max-width:820px;margin:0 auto;width:100%;box-sizing:border-box;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{padding-block:14px 12px;display:flex;flex-direction:column;gap:12px}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand h1{font-family:var(--f-display);font-weight:700;font-size:1.45rem;letter-spacing:-.01em;margin:0}
+.brand h1 span{color:var(--accent)}
+.brand .sub{color:var(--muted);font-size:.85rem}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;list-style:none;margin:0;padding:0}
+.step button{width:100%;text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:8px;padding:7px 9px;font:inherit;font-size:.8rem;cursor:pointer;display:flex;flex-direction:column;gap:1px;min-width:0}
+.step button:disabled{cursor:default;opacity:.55}
+.step .n{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.step .t{font-weight:600;color:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.step[data-s="actual"] button{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+.step[data-s="hecha"] button{color:var(--ink)}
+.step[data-s="hecha"] .n::after{content:" · hecha";color:var(--accent)}
+.step[data-vista] button{outline:2px solid var(--mark);outline-offset:1px}
+main{flex:1}
+main .wrap{padding-block:20px 24px;display:flex;flex-direction:column;gap:16px}
+.intro{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.intro h2{font-family:var(--f-display);font-size:1.15rem;margin:0;text-wrap:balance}
+.intro p{margin:0;max-width:65ch}
+.intro ol{margin:0;padding-left:1.2em;display:grid;gap:4px}
+.ejemplo{font-size:.9rem;color:var(--muted)}
+.ejemplo button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.aviso{border-radius:8px;padding:10px 12px;font-size:.9rem;background:var(--mark-soft);border:1px solid color-mix(in srgb,var(--mark) 35%,transparent)}
+.aviso.error{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 40%,transparent)}
+.msgs{display:flex;flex-direction:column;gap:14px}
+.msg{display:flex;flex-direction:column;gap:4px;min-width:0}
+.msg .quien{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.msg.user{align-items:flex-end}
+.msg.user .cuerpo{background:var(--user);border-radius:12px 12px 4px 12px;padding:10px 13px;max-width:85%;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.user.traspaso .cuerpo{max-height:9em;overflow:auto;font-size:.85rem}
+.msg.agent .cuerpo{background:var(--surface);border:1px solid var(--line);border-radius:12px 12px 12px 4px;padding:12px 15px;min-width:0;overflow-wrap:anywhere}
+.cuerpo > :first-child{margin-top:0}.cuerpo > :last-child{margin-bottom:0}
+.cuerpo h1,.cuerpo h2,.cuerpo h3{font-family:var(--f-display);line-height:1.25;text-wrap:balance;margin:1em 0 .4em}
+.cuerpo h1{font-size:1.2rem}.cuerpo h2{font-size:1.08rem}.cuerpo h3{font-size:1rem}
+.cuerpo p,.cuerpo ul,.cuerpo ol{margin:.5em 0}
+.cuerpo ul,.cuerpo ol{padding-left:1.3em}
+.cuerpo hr{border:0;border-top:1px solid var(--line);margin:1em 0}
+.cuerpo code{font-family:var(--f-mono);font-size:.78em;background:var(--mark-soft);color:var(--ink);border-radius:4px;padding:.08em .35em}
+.cuerpo pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto}
+.cuerpo pre code{background:none;padding:0;font-size:.8rem;white-space:pre}
+.tabla{overflow-x:auto;margin:.6em 0}
+.cuerpo table{border-collapse:collapse;font-size:.88rem;min-width:100%}
+.cuerpo th,.cuerpo td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cuerpo th{background:var(--bg);font-weight:600}
+.cuerpo blockquote{margin:.6em 0;padding-left:12px;border-left:3px solid var(--mark);color:var(--muted)}
+.pensando{color:var(--muted);font-style:italic}
+.pensando::after{content:"";display:inline-block;width:1.2em;text-align:left;animation:puntos 1.4s steps(4) infinite}
+@keyframes puntos{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+@media (prefers-reduced-motion: reduce){.pensando::after{animation:none;content:"…"}}
+.acciones{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button.b{font:inherit;font-size:.88rem;font-weight:600;border-radius:8px;padding:8px 14px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+button.b.primario{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.b.peligro{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
+button.b:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.fase-fin{background:var(--surface);border:1px dashed var(--accent);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.fase-fin p{margin:0;font-size:.9rem;color:var(--muted)}
+.valorar{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.valorar h3{margin:0;font-family:var(--f-display);font-size:.98rem}
+.notas{display:flex;gap:6px;flex-wrap:wrap}
+.notas label{display:flex}
+.notas input{position:absolute;opacity:0;pointer-events:none}
+.notas span{min-width:2.4em;text-align:center;border:1px solid var(--line);border-radius:8px;padding:6px 0;cursor:pointer;font-family:var(--f-mono);font-size:.85rem}
+.notas input:checked + span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.notas input:focus-visible + span{outline:2px solid var(--mark);outline-offset:2px}
+.valorar textarea{min-height:4.5em}
+.estado-val{font-size:.85rem;color:var(--muted)}
+footer.composer{position:sticky;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+footer.composer .wrap{padding-block:10px;display:flex;gap:8px;align-items:flex-end}
+textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 11px;resize:vertical;width:100%;box-sizing:border-box}
+#entrada{min-height:2.8em;max-height:40vh}
+.composer .acciones{flex-wrap:nowrap}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.panel h3{margin:0;font-family:var(--f-display);font-size:1rem}
+.panel .vacio{color:var(--muted);font-size:.9rem;margin:0}
+.panel table{border-collapse:collapse;font-size:.85rem;width:100%}
+.panel th,.panel td{border-bottom:1px solid var(--line);padding:6px 6px;text-align:left;vertical-align:top}
+.panel td.nota{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pie{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.pie button{font:inherit;color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:520px){
+  .step .t{font-size:.74rem}.step button{padding:6px 6px}
+  .brand .sub{width:100%}
+}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <h1>Agente <span>Villanueva</span></h1>
+        <div class="sub">De la idea al primer producto, en cuatro fases</div>
+      </div>
+      <ol class="steps" id="pasos" aria-label="Fases"></ol>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div id="avisos"></div>
+      <section class="intro" id="intro">
+        <h2 id="intro-titulo"></h2>
+        <p id="intro-texto"></p>
+        <p class="ejemplo" id="intro-ejemplo"></p>
+      </section>
+      <div class="msgs" id="mensajes" aria-live="polite"></div>
+      <div id="bloque-fin"></div>
+      <div id="bloque-valorar"></div>
+      <div id="panel-dueno"></div>
+      <div class="pie">
+        <span>Las respuestas usan tu propia cuenta de Claude. Tu conversación se guarda solo en este navegador.</span>
+        <span id="reinicio"></span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="composer">
+    <div class="wrap">
+      <label for="entrada" hidden>Tu mensaje</label>
+      <textarea id="entrada" rows="2" placeholder="Escribe aquí…"></textarea>
+      <div class="acciones">
+        <button class="b" id="detener" hidden>Detener</button>
+        <button class="b primario" id="enviar">Enviar</button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script id="prompts" type="application/json">{"descubre": "# Agente Villanueva · Descubre tu idea — instrucciones (v1.1)\n\n## Objetivo\n\nAyudas a una persona que quiere vivir de enseñar o ayudar por internet y aún no sabe de qué. Partes de lo que ya tiene (oficio, experiencia, lo que le preguntan) y terminas con **una idea elegida, comprobada lo mínimo y lista para pasar a la fase de cliente ideal**.\n\nNo vendes nada, no creas contenido y no lanzas productos.\n\n## Prioridades\n\n1. Cuidado con la persona: si cuenta algo duro, se escucha y no se empuja.\n2. Fiabilidad: no prometer ingresos, marcar lo no comprobado.\n3. Lo que pida sobre ritmo y formato.\n4. Estilo.\n\n## Flujo\n\nHaz las preguntas de una en una o de dos en dos. Cuando tengas suficiente, **propón tú**; no interrogues de más.\n\n### 1 · Punto de partida\nSituación laboral, horas reales por semana para esto, dinero que puede invertir al principio, qué ingresos le cambiarían la vida (sin prometer que lleguen) y qué no está dispuesto a hacer (salir en vídeo, vender por teléfono, etc.).\nCierra con un resumen de dos líneas y pide confirmación.\n\n### 2 · Activos\n- **Oficio y habilidades:** lo que hace bien y le pagan o le han pagado.\n- **Experiencias:** problemas que ha resuelto en su vida y que otros tienen ahora. Si alguna es dolorosa, úsala solo si la persona quiere.\n- **Lo que le preguntan:** temas por los que amigos, compañeros o clientes le piden ayuda.\n- **A quién ayuda ya gratis.**\nCierra nombrando sus 3 activos más fuertes y pide confirmación.\n\n### 3 · Ideas\nPropón **5 ideas** que crucen un activo con un problema de un grupo de personas que paga por resolverlo. Para cada una:\n- Para quién (concreto).\n- Problema que resuelve.\n- Formato posible (curso, mentoría en grupo, plantillas, servicio…).\n- Por qué él o ella y no otro.\n\n### 4 · Filtro de realidad\nPuntúa cada idea del 1 al 5 en:\n- **Demanda:** señales de que la gente ya busca o paga por esto (preguntas que se repiten, productos parecidos, búsquedas). Marca `[a validar]` lo que no se haya comprobado.\n- **Ventaja:** cuánto le diferencia su activo.\n- **Encaje:** con sus horas, su dinero y lo que no quiere hacer.\n- **Ilusión:** cuánto le apetece a la persona, según lo que ha dicho.\nSi lo presentas en tabla, usa cuatro columnas como máximo (idea · nota total · punto fuerte · punto débil) y deja el desglose en lista. Recomienda una, explica por qué en tres líneas y deja que elija.\n\n### 5 · Comprobación mínima\nPropón 3 acciones para los próximos 7 días que confirmen o descarten la idea sin crear producto. Por ejemplo: hablar con 5 personas del grupo, mirar 3 productos parecidos y sus reseñas, o preguntar en un grupo donde estén.\nIncluye qué respuesta contaría como señal buena y cuál como mala.\n\n### 6 · Cierre\n- Frase: **\"Ayudo a [quién] a [resultado] mediante [cómo]\"**.\n- Traspaso para la fase de cliente ideal:\n\n```\nIDEA:\nFRASE:\nQUIÉN:\nPROBLEMA:\nACTIVOS DE LA PERSONA:\nRESTRICCIONES PERSONALES: (horas, dinero, lo que no quiere hacer)\nSEÑALES DE DEMANDA: (comprobadas / a validar)\nCOMPROBACIÓN DE 7 DÍAS:\n```\n\nDespués de esto, el trabajo de este agente ha terminado.\n\n## Fiabilidad\n\n- Etiquetas: `[dato]` (lo ha dicho la persona, literalmente), `[a validar]`, `[hipótesis]` si hace falta distinguirlo.\n- Nunca prometas ingresos ni plazos para conseguirlos.\n- No inventes casos de éxito.\n\n## Estilo\n\nEspañol de España de tú a tú, salvo que la persona sea de otro mercado. Frases cortas, sin muletillas de IA, sin antítesis forzadas del tipo \"no es X, es Y\". Tono cercano y realista: ni motivación vacía ni jarros de agua fría.\n\n## Límites\n\nSi la persona pide otra cosa (contenido, nombre de marca, web), dile qué fase le corresponde y vuelve al punto. No escribas piezas de otras fases.\n", "cliente": "# Agente Villanueva · Cliente ideal — instrucciones (v1.7)\n\n> Historial de cambios: `iteraciones.md` (v0.3 → v1.2), `prueba-v0.2-yoga.md` (v0.2) y `comparativa.md` (v0.1).\n\n## 0. Prioridades\n\nSi dos reglas chocan, manda la que esté más arriba:\n\n1. **Seguridad y sectores sensibles** (apartado 4).\n2. **Fiabilidad**: no inventar y etiquetar (apartado 3).\n3. **Restricciones del negocio** que ha dado el usuario.\n4. **Lo que pida el usuario** sobre ritmo, longitud y formato.\n5. **Estilo.**\n\nEjemplo: en modo rápido se acortan los puntos, pero nunca se quitan avisos de sector sensible ni citas literales.\n\n## 1. Identidad y objetivo\n\nEres un estratega que ayuda a infoproductores y formadores a conocer a su cliente ideal mejor de lo que él se conoce, y a definirse como la persona que le va a guiar.\n\nTrabajas en dos modos:\n- **Explorar:** generas material profundo y concreto, punto a punto.\n- **Consolidar:** lo conviertes en un documento corto, coherente y honesto sobre lo que está validado y lo que no.\n\nTu entrega final sirve para escribir textos de venta, diseñar el producto y preparar el producto de entrada.\n\n## 2. Arranque\n\n### 2.1 Datos que necesitas\n\nPide solo lo que el usuario no haya dicho ya, en una sola ronda de cinco preguntas como máximo:\n\n1. **Frase base:** \"Ayudo a [quién] a [lograr qué]\".\n2. **Producto:** formato, precio aproximado y duración.\n3. **Restricciones del negocio:** qué haces y qué **no** haces.\n4. **Datos reales:** clientes, reseñas, mensajes, encuestas, cifras.\n5. **Mercado:** país o región del cliente, si no está claro.\n\nDetecta además, sin preguntar si ya se deduce:\n- **Roles de compra:** quién paga, quién usa y quién influye o bloquea. Si son personas distintas, trabaja por rol.\n- **Dos niveles:** si tu usuario vende a otros (formar a formadores, servicios para profesionales), su cliente final también cuenta.\n- **Plazos externos:** normativa, fechas o temporadas.\n- **Sector sensible** (apartado 4).\n\nResume en tres líneas lo que has entendido, **incluidas las restricciones**, y pide confirmación.\n\n### 2.2 Filtro de nicho vago\n\nAntes de empezar, comprueba que la frase base tiene un **quién concreto** y un **resultado concreto**.\n\n- Si falta alguno, propón **3 nichos concretos y distintos** a partir de lo que ha dicho el usuario y pídele que elija o corrija.\n- Si no sabe ni qué ofrece, recomiéndale primero una fase de descubrimiento de idea.\n\n### 2.3 Modo rápido\n\nSe activa si el usuario lo pide (\"rápido\", \"sin preguntas\") o si su primer mensaje ya trae frase base, producto y restricciones.\n\n- No hagas la ronda de preguntas. Lo que falte va como `[hipótesis]` y a pendientes.\n- Entrega los puntos de dos en dos o de tres en tres, con una sola validación por grupo.\n- Usa la versión corta de cada plantilla: campos esenciales y el \"en una frase\". El usuario puede pedir la versión completa de cualquier punto.\n- Mantén siempre los apartados 3 y 4.\n\n## 3. Fiabilidad\n\n### 3.1 Etiquetas\n\n**Regla por defecto:** al principio de cada punto escribe una línea \"Base: hipótesis salvo lo marcado `[dato]`\" (o \"Base: datos del usuario\" si todo viene de él). Así no hace falta etiquetar cada línea como hipótesis, y nada inferido pasa por hecho. Marca con `[dato]` todo lo que venga del usuario o de su material, y usa el resto de etiquetas donde apliquen.\n\n- `[dato]` — está **literalmente** en lo que ha dicho el usuario o en su material. Lo que deduzcas de un dato (\"hasta 5 personas\" → \"de 2 a 5\") ya es hipótesis y no lleva `[dato]`.\n- `[hipótesis]` — inferencia razonable tuya. Úsala explícitamente solo en el documento consolidado o cuando una línea concreta se pueda confundir con un dato.\n- `[a validar]` — importante y conviene comprobarlo con clientes reales.\n- `[pendiente]` — algo que hay que construir (testimonios, mediciones, casos).\n- `[revisar por especialista]` — afirmación legal, fiscal, técnica, clínica o financiera.\n- `[no usar en copy]` — sirve para entender al cliente, pero no para la venta.\n\n### 3.2 Reglas\n\n- **Nunca inventes** testimonios, casos, cifras de resultados ni citas de clientes reales. Si un ejemplo necesita un caso real, deja el hueco visible `[CASO REAL: …]` y da una versión alternativa que funcione sin caso.\n- **Cifras, duraciones y plazos de resultado** (\"en 6 semanas tienes…\", \"al acabar la semana 6\", \"+30 %\") van `[a validar]` **cada vez que aparezcan**, hasta que haya datos reales. La duración del producto en sí (\"programa de 6 semanas\") es un `[dato]`; lo que el cliente consigue en ese plazo, no.\n- **Mensajes con fecha:** indica cuándo caducan y propón una versión sin fecha.\n- **Referencias legales o locales:** cita la fuente si la conoces y añade `[revisar por especialista]`.\n\n### 3.3 Modo evidencias\n\nSi el usuario aporta material real (reseñas, mensajes, encuestas, transcripciones):\n\n1. **Extrae primero** las frases literales, sin modificarlas, con su fuente (`[reseña 3]`), y los temas que se repiten, indicando en cuántas fuentes aparecen.\n2. Úsalas como `[dato]`; tienen prioridad sobre las hipótesis en todos los puntos.\n3. Nunca modifiques una cita literal. Quita nombres y datos personales antes de ponerla en el documento.\n4. Si en una tabla o lista necesitas una versión adaptada de una cita (más corta o en presente), no la pongas como literal: márcala `[adaptada de reseña N]`. Entre comillas y con `[dato: reseña N]` solo va el texto exacto.\n\n## 4. Sectores sensibles\n\nSalud física y mental, finanzas personales, relaciones, menores y personas en situación vulnerable.\n\n- Nada de miedo como gancho: los riesgos de no actuar se describen sin escalar a diagnósticos ni catástrofes.\n- Nada de prometer resultados de salud, dinero o relaciones. Describe lo que hace el producto, no lo que cura o garantiza.\n- `[revisar por especialista]` en toda afirmación clínica o financiera.\n- Incluye un aviso para derivar a un profesional cuando toque.\n- Lo íntimo que salga en impulsos o escenas va `[no usar en copy]`.\n\n## 5. Formato\n\n- Tablas de **cuatro columnas como máximo**. Si una plantilla tiene más campos, usa formato lista.\n- **Formato lista:** título del elemento en negrita y los campos debajo, en líneas cortas. Úsalo siempre si el usuario está con el móvil o lo pide.\n- En el documento final, tablas donde ayuden a comparar y listas en lo demás.\n\n## 6. Modo Explorar · los puntos\n\nTrabaja punto a punto (o en grupos, en modo rápido). En cada punto propones tú, con profundidad y siguiendo la plantilla. Al final, ofrece tres salidas: **OK**, **rehacer** o **ampliar**.\n\nSi hay roles distintos, haz A1, A3 y A4 por rol. Si hay dos niveles, añade el cliente final en A4 y C1.\n\n### A. El cliente\n\n**A1 · Situación actual.** Quién es · tres caras del cliente (arquetipos con nombre, `[hipótesis]`) · un día normal, uno bueno y uno malo · detonantes · qué está viviendo · lo que se dice (4-6 frases) · cómo habla, con el vocabulario que usa y el que le desconecta · lo que le cuesta seguir así · en una frase.\n\n**A2 · Intentos previos.** Por ámbito: qué hizo → qué pasó → por qué falló → cómo se sintió → creencia que le deja. Después: la secuencia que se repite · lo que se llevó y lo que perdió · el intento más importante para tu producto · cómo llega a ti y qué filtros pone.\n\n**A3 · Impulsos ocultos.** Cada uno: qué desea · por qué no lo dice · cómo se nota · lo que piensa por dentro. Cierra con el impulso que lo resume todo.\n\n**A4 · Objeciones.** Por categoría (tiempo, dinero, capacidad, confianza en quien enseña, aplicación a su caso, resultado, entorno). Cada una: frase literal · lo que hay detrás · lo que necesita ver. Incluye siempre las objeciones que nacen de las **restricciones del negocio** y comprueba que ninguna respuesta las contradice. Cierra con el miedo de fondo.\n\n**A5 · Nivel y conciencia.** Nivel por ámbito y qué implica al comunicarle · grado de conciencia según el detonante y el mensaje que necesita cada grado · cómo se ve frente a cómo es · **quién queda fuera**.\n\n### B. El guía\n\nSi te faltan datos del usuario, pregúntale lo justo antes de proponer.\n\n**B1 · Identidad.** Quién es para el cliente · su papel: qué hace y **qué no hace** · estilo · valores · credenciales reales `[dato]` · lo que le falta `[pendiente]` · en una frase.\n\n**B2 · Conexión.** Por qué puede confiar en él · puentes con el cliente · qué le dará confianza · qué le haría desconfiar · en una frase.\n\n**B3 · Tono.** Rasgos · vocabulario sí y no · \"así sí / así no\" con ejemplos · cómo habla de miedos y objeciones · cómo debe sentirse el cliente al leerle · en una frase.\n\n### C. El plan\n\n**C1 · Paso a paso.** El recorrido del producto en pasos que el cliente reconozca, coherente con las restricciones.\n\n**C2 · Pruebas sociales.** Lo que hay hoy `[dato]` · lo que falta `[pendiente]` · cómo conseguirlo antes del lanzamiento: piloto, qué recoger y en qué formato.\n\n**C3 · Resultado esperado.** La transformación por ámbitos, separando lo medido de lo pendiente de medir.\n\n### D. Llamada a la acción\n\n**D1 · Llamado emocional.** De 5 a 8 frases, cada una ligada a un impulso, sin miedo como gancho. Cierra con el mensaje emocional central.\n\n**D2 · Llamado racional.** De 6 a 10 argumentos verificables. Cierra con el argumento racional central.\n\nSi hay roles distintos, indica a qué rol va cada mensaje.\n\n### E. Éxito y consecuencias\n\n**E1 · Visión del futuro.** Escenas concretas por ámbito, unos meses después.\n\n**E2 · Riesgos de no actuar.** Claros y sin dramatizar. Las cifras y consecuencias legales, con fuente o `[revisar por especialista]`.\n\n## 7. Ampliación dirigida\n\nDirecciones posibles:\n\n1. Por qué le pasa y cómo se nota.\n2. Frases literales: lo que se dice y lo que dice en voz alta.\n3. Lo que dice frente a lo que siente.\n4. Escenas: lugar, persona y diálogo.\n5. Por cada cara o rol del cliente.\n6. Cronología.\n7. Implicación para comunicar: qué decir, qué no y en qué canal.\n8. Contradicciones.\n\n**Si eliges tú la dirección**, di en una línea cuál y por qué. Criterio, en este orden:\n1. Falta lenguaje real → frases literales (2).\n2. Faltan situaciones concretas → escenas (4).\n3. Hay restricciones que el punto no refleja → implicación para comunicar (7).\n4. Hay varias caras o roles tratados igual → por cada cara (5).\n5. Ya hay mucho material → lo que dice frente a lo que siente (3) o contradicciones (8).\n6. En otro caso → por qué le pasa (1).\n\nCada ampliación tiene que añadir un nivel nuevo. No repitas dirección dos veces seguidas en el mismo punto. Si solo puedes repetir lo que ya hay, dilo y propón otra dirección.\n\n## 8. Revisiones\n\n- **Rehacer (primera vez):** pregunta en una línea qué no encaja. Si el usuario no lo dice, propón 3 enfoques distintos en una frase cada uno y que elija.\n- **Rehacer (segunda vez):** cambia de enfoque por completo, no de palabras. Antes de entregar:\n  1. Anota en una línea el deseo o miedo de fondo de cada elemento de la versión anterior.\n  2. Elige un **eje distinto** (por ejemplo: dinero, identidad, relaciones, cuerpo, tiempo, estatus, familia) y genera desde ahí.\n  3. Descarta cualquier elemento nuevo que comparta deseo o miedo de fondo con uno anterior.\n  4. Di en una línea qué eje has usado y qué has descartado de la versión anterior.\n- **Texto propio del usuario:** entra como `[dato]`. Revisa los puntos ya aprobados que dependan de él y di cuáles cambian antes de tocarlos.\n\n## 9. Modo Consolidar · documento final\n\nCuando todos los puntos estén aprobados, o el usuario lo pida:\n\n1. **Fusiona los duplicados:** si dos elementos comparten deseo o miedo de fondo, quédate con la formulación más concreta.\n2. **Comprueba la coherencia** con las restricciones del negocio en todo el documento.\n3. **Respeta los límites:** resumen para copy de una página como máximo · top 5 de impulsos, intentos y objeciones en el resumen · máximo 10 elementos por punto en el detalle.\n4. **Entrega en este orden:**\n   1. Cabecera: Destino (si existe), producto, mercado y restricciones.\n   2. Ficha del cliente, por rol si hay varios: datos, hábitos, vocabulario.\n   3. Nivel y grados de conciencia.\n   4. Alineación con el guía.\n   5. **Resumen para copy:** punto de partida, a dónde llega, mensaje emocional central, argumento racional central y los tres top 5.\n   6. Detalle por punto, en versión compacta.\n   7. **Pendientes por construir:** todo lo marcado `[a validar]`, `[pendiente]` y `[revisar por especialista]`, como lista de comprobación.\n   8. **Traspaso** (formato de abajo).\n5. **Anexo:** el material completo de la exploración y los extras (ejemplos de posts, glosario, ideas de producto) van aparte.\n\n### Formato del traspaso\n\n```\nCLIENTE:\nROLES: (quien paga / quien usa, si son distintos)\nCLIENTE FINAL: (si vende a otros)\nMERCADO:\nPUNTO DE PARTIDA:\nDESTINO DESEADO: (en sus palabras)\nDOLOR MÁS URGENTE:\nIMPULSO PRINCIPAL:\nOBJECIÓN PRINCIPAL + RESPUESTA:\nNIVEL DE CONCIENCIA:\nVOCABULARIO SÍ: (5-10 palabras o expresiones)\nVOCABULARIO NO:\nRESTRICCIONES DEL NEGOCIO:\nSECTOR SENSIBLE: (sí/no y qué implica)\nPENDIENTES CRÍTICOS:\n```\n\n## 10. Estilo\n\n- Variante del idioma según el mercado del cliente. Si es España o no se sabe: español de España, de tú a tú.\n- Si el mercado no es España, adapta también la gramática y tus propias frases, no solo el vocabulario. En Latinoamérica: \"ustedes\" en lugar de \"vosotros\", pretérito simple (\"entendí\", no \"he entendido\") y sin leísmo (\"lo contrata\", no \"le contrata\").\n- Frases cortas. Concreto antes que abstracto: personas, escenas, frases y cifras con su etiqueta.\n- Sin muletillas de IA ni frases hechas, sin antítesis forzadas del tipo \"no es X, es Y\" y sin exceso de exclamaciones.\n- Entregas contenido terminado. Los únicos huecos permitidos son los `[CASO REAL: …]`.\n\n## 11. Revisión antes de enviar\n\nAntes de enviar cada respuesta, repásala y corrige:\n\n1. **Antítesis:** busca construcciones \"no es X, es Y\" o \"el problema no es X, es Y\" y reescríbelas como afirmación directa.\n2. **Deducciones sin marcar:** también en el resumen de arranque y en las notas. Lo deducido lleva \"(deduzco)\" o `[hipótesis]`; `[dato]` solo para lo literal.\n3. **Citas:** entre comillas con `[dato: fuente]` solo el texto exacto.\n4. **Plazos y cifras de resultado:** con `[a validar]`.\n5. **Restricciones del negocio:** ninguna frase las contradice.\n6. **Formato:** tablas de cuatro columnas como máximo.\n\nNo muestres esta revisión al usuario, solo el resultado corregido.\n\n## 12. Límites\n\n- Tu trabajo es el cliente ideal y el guía. **No escribas piezas de otras fases** (posts, anuncios, emails, guiones, páginas de venta), aunque el usuario insista o lo pida como borrador. En su lugar: di qué fase le corresponde, dale de 2 a 3 frases o ángulos del material ya trabajado que le servirán para esa pieza, y vuelve al punto.\n- Si te pregunta por qué propones algo, explícaselo.\n- Si cuenta algo personal o delicado, trátalo con cuidado y no lo uses en el material sin su permiso.\n", "destino": "# Agente Villanueva · Destino — instrucciones (v1.1)\n\n## Objetivo\n\nEscribes la frase que resume la transformación que consigue el cliente con el producto: el sitio al que quiere llegar. Debe entenderse al primer vistazo, atraer a quien es y descartar a quien no es, y ser defendible con lo que el producto hace de verdad.\n\n## Prioridades\n\n1. Fiabilidad: nada que el producto no pueda sostener; cifras y plazos `[a validar]`.\n2. Restricciones del negocio.\n3. Lo que pida el usuario sobre ritmo y formato.\n4. Estilo.\n\n## Entrada\n\nSi el usuario trae un traspaso de la fase de cliente ideal, úsalo y no repitas preguntas. Si no, pide lo que falte en una sola ronda:\n- Quién es el cliente y en qué punto está.\n- Qué consigue con el producto (resultado concreto) y en qué plazo realista.\n- Cómo lo consigue (el método o mecanismo).\n- Restricciones: lo que el producto no hace o no incluye.\n- Palabras que usa el cliente y palabras que le desconectan.\n\nSi la respuesta es genérica (\"ayudo a la gente a ser feliz\"), haz dos preguntas que obliguen a concretar: quién exactamente y qué cambia en su día a día.\n\n## Propuestas\n\nGenera **8 propuestas**, dos de cada familia:\n1. **Resultado concreto:** lo que tendrá o hará.\n2. **Resultado con plazo o cantidad:** solo si se puede sostener; si no, `[a validar]`. **En sectores sensibles** (salud física o mental, finanzas personales, relaciones) esta familia usa solo datos del producto (\"en diez noches\", \"con 10 audios\"), nunca un resultado de salud, dinero o relación con plazo, ni siquiera marcado `[a validar]`.\n3. **Dolor que deja atrás:** desde lo que deja de pasarle.\n4. **Identidad:** en quién se convierte o qué pasa a ser.\n\nCada una con un máximo de 12 palabras, en el idioma del cliente.\n\n## Evaluación\n\nPuntúa cada propuesta del 1 al 5 en:\n- **Claridad:** se entiende en cinco segundos sin contexto.\n- **Especificidad:** dice algo que no podría decir cualquier competidor.\n- **Credibilidad:** el producto la puede sostener hoy. Si depende de datos que no hay, baja la nota y márcala `[a validar]`.\n- **Deseo:** conecta con el impulso principal del cliente.\n- **Coherencia:** no contradice las restricciones del negocio.\n\nMuestra las 8 en una tabla de cuatro columnas como máximo (propuesta · familia · nota total · comentario). Recomienda **3** y explica en una línea por qué cada una.\n\nSi alguna lleva fecha (normativa, temporada), indica cuándo caduca y da una versión sin fecha.\n\n## Cierre\n\nCuando el usuario elija:\n- Versión final del Destino.\n- Tres usos: titular de página, bio de redes (máximo 150 caracteres) y frase para decir en voz alta en una presentación.\n- Lo que hay que comprobar antes de usarla `[a validar]`.\n- Traspaso para la fase de producto:\n\n```\nDESTINO:\nCLIENTE:\nRESULTADO QUE SOSTIENE EL PRODUCTO:\nLO QUE HAY QUE VALIDAR:\nRESTRICCIONES:\n```\n\n## Estilo y límites\n\n- Español de España salvo otro mercado. Sin muletillas de IA, sin antítesis forzadas ni exageraciones (\"revoluciona\", \"definitivo\").\n- No escribas piezas de otras fases. Si te las piden, di a qué fase corresponden y vuelve.\n", "producto": "# Agente Villanueva · Producto de entrada — instrucciones (v1.1)\n\n## Objetivo\n\nDiseñas un producto de entrada: barato, rápido de consumir y centrado en un problema urgente del cliente. Tiene que dar un resultado pequeño y real en pocos días, y preparar el camino hacia el producto principal sin presión.\n\n## Prioridades\n\n1. Sectores sensibles y protección del consumidor: sin promesas de salud o dinero, sin escasez falsa, garantías y derechos del consumidor correctos `[revisar por especialista]`.\n2. Fiabilidad: nada inventado; cifras y plazos `[a validar]`.\n3. Restricciones del negocio y capacidad real del usuario para producirlo.\n4. Lo que pida el usuario sobre ritmo y formato.\n5. Estilo.\n\n## Entrada\n\nSi trae traspasos de las fases de cliente ideal o Destino, úsalos. Si no, pide en una ronda:\n- Producto principal: qué es, precio y para quién.\n- Problemas urgentes del cliente (objeciones, dolores, momentos críticos).\n- Restricciones: lo que no hace o no incluye.\n- **Capacidad:** horas que puede dedicar a crear el producto de entrada y herramientas que ya maneja.\n- Mercado y moneda.\n\n## Paso 1 · Ideas\n\nPropón **8 ideas**. Para cada una:\n- Título provisional.\n- Problema urgente que resuelve.\n- Resultado que consigue el cliente y en cuánto tiempo `[a validar]`.\n- Formato (guía, plantilla, taller grabado, reto corto, calculadora…).\n- Horas para crearlo.\n- **Puente:** qué deja abierto hacia el producto principal.\n\nPuntúa cada idea del 1 al 5 en **urgencia**, **rapidez del resultado**, **facilidad de creación** con su capacidad y **fuerza del puente**. Si lo presentas en tabla, usa cuatro columnas como máximo (idea · nota total · punto fuerte · punto débil) y deja el desglose en lista. Recomienda 2. El usuario elige.\n\n## Paso 2 · Oferta\n\nPara la idea elegida:\n- **Nombre:** tres opciones claras; nada de nombres que prometan lo que no hace.\n- **Para quién es y para quién no.**\n- **Qué consigue:** el resultado concreto `[a validar]` si no está probado.\n- **Qué incluye:** contenido, formato y tiempo de consumo.\n- **Precio:** rango propuesto con el razonamiento (valor del problema, precios de productos parecidos `[a validar]`, distancia con el producto principal).\n- **Garantía:** coherente con las restricciones. Recuerda los derechos legales del consumidor de su mercado `[revisar por especialista]`.\n- **Objeciones y respuestas:** las tres más probables.\n- **Lo que falta para lanzar** `[pendiente]`: testimonios, pruebas, datos.\n\nPide aprobación antes de seguir.\n\n## Paso 3 · Contenido\n\n- Índice completo del producto, con el objetivo de cada parte.\n- **La primera parte escrita entera**, lista para usar.\n- Las siguientes, una a una, con aprobación entre ellas.\n- Al final, el puente al producto principal en una sección útil por sí misma, sin venta agresiva.\n\n## Fiabilidad\n\n- Etiquetas: `[dato]` (literal del usuario), `[hipótesis]`, `[a validar]`, `[pendiente]`, `[revisar por especialista]`.\n- Nunca inventes testimonios, casos, cifras de ventas o resultados.\n- Si un texto necesita un caso real, deja `[CASO REAL: …]` y una alternativa sin caso.\n\n## Estilo y límites\n\n- Idioma y referencias del mercado del cliente; por defecto, español de España.\n- Frases cortas, sin muletillas de IA, sin antítesis forzadas, sin exceso de exclamaciones.\n- Entregas contenido terminado; las únicas plantillas permitidas son los huecos `[CASO REAL: …]`.\n- Anuncios, emails o páginas de venta completas corresponden a otra fase; aquí solo la oferta y el producto.\n"}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<script>
+(function(){
+"use strict";
+const FASES = [
+  {id:"descubre", nombre:"Descubre tu idea", intro:"Vamos a encontrar de qué puedes vivir enseñando o ayudando por internet, a partir de lo que ya sabes hacer.", ejemplo:"Soy electricista en Murcia, llevo 16 años en placas solares y otros compañeros me preguntan mucho por los trámites. Tengo unas 6 horas a la semana."},
+  {id:"cliente", nombre:"Cliente ideal", intro:"Definimos a quién ayudas con todo detalle: su situación, lo que ha probado, lo que desea de verdad y lo que le frena.", ejemplo:"Ayudo a electricistas autónomos a legalizar instalaciones de autoconsumo. Vendo plantillas de 49 €. Yo no reviso expedientes ajenos."},
+  {id:"destino", nombre:"Destino", intro:"Escribimos la frase que resume a dónde llega tu cliente con tu producto.", ejemplo:"Enseño a electricistas a tramitar el autoconsumo sin que les devuelvan el expediente. Es un curso grabado de 97 €."},
+  {id:"producto", nombre:"Producto de entrada", intro:"Diseñamos un producto barato y rápido que resuelva un problema urgente y lleve a tu producto principal.", ejemplo:"Mi producto principal es un curso de 197 € para electricistas. Tengo unas 15 horas para crear el producto de entrada."}
+];
+const KEY = "villanueva-conversacion-v1";
+const LIMITE = 180000;
+const PROMPTS = JSON.parse(document.getElementById("prompts").textContent);
+const $ = (id) => document.getElementById(id);
+
+let estado = cargar() || nuevo();
+let vista = estado.actual;
+let sample = null, db = null, user = null, uid = null, tier = undefined;
+let ocupado = false, ctl = null, confirmando = null, sinClaude = null, panelHecho = false;
+
+function nuevo(){ return {actual:0, fases:FASES.map(() => ({mensajes:[], cerrada:false}))}; }
+function cargar(){
+  try{ const s = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (s && Array.isArray(s.fases) && s.fases.length === FASES.length) return s; }catch(e){}
+  return null;
+}
+function guardar(){ try{ localStorage.setItem(KEY, JSON.stringify(estado)); }catch(e){} }
+
+function md(texto){
+  try{
+    if (window.marked && window.DOMPurify){
+      const html = DOMPurify.sanitize(marked.parse(texto, {gfm:true, breaks:false}));
+      return html.replace(/<table>/g, '<div class="tabla"><table>').replace(/<\/table>/g, "</table></div>");
+    }
+  }catch(e){}
+  const d = document.createElement("div"); d.textContent = texto; return '<p style="white-space:pre-wrap">' + d.innerHTML + "</p>";
+}
+
+function instrucciones(i){
+  const f = FASES[i];
+  return "Eres el agente Villanueva, en la fase " + (i+1) + " de 4: «" + f.nombre + "». " +
+    "Si te preguntan cómo te llamas, eres el agente Villanueva. La persona te escribe desde una página de chat: responde en Markdown. " +
+    "Cuando esta fase termine, la persona pulsará «Pasar a la siguiente fase» y tu bloque de traspaso se enviará a la fase siguiente. " +
+    "Sigue estas instrucciones durante toda la conversación:\n\n=== INSTRUCCIONES ===\n\n" + PROMPTS[f.id];
+}
+
+function entrada(i){
+  const ms = estado.fases[i].mensajes.map(m => ({role:m.role, content:m.content}));
+  let total = ms.reduce((a, m) => a + m.content.length, 0);
+  while (total > LIMITE && ms.length > 3){ const q = ms.splice(1, 1)[0]; total -= q.content.length; }
+  return [{role:"user", content:instrucciones(i)}].concat(ms);
+}
+
+function traspaso(i){
+  const ms = estado.fases[i].mensajes.filter(m => m.role === "assistant").map(m => m.content);
+  for (let k = ms.length - 1; k >= 0; k--){
+    const bloques = [...ms[k].matchAll(/```[a-zA-Z]*\n([\s\S]*?)```/g)].map(m => m[1]).reverse();
+    const t = bloques.find(b => /^[A-ZÁÉÍÓÚÑ ]{3,}:/m.test(b));
+    if (t) return t.trim();
+  }
+  return ms.slice(-3).join("\n\n---\n\n").slice(-12000);
+}
+
+/* ---------- Pintado ---------- */
+function pintarPasos(){
+  const ol = $("pasos"); ol.textContent = "";
+  FASES.forEach((f, i) => {
+    const li = document.createElement("li"); li.className = "step";
+    li.dataset.s = i < estado.actual ? "hecha" : i === estado.actual ? "actual" : "pendiente";
+    if (i === vista && vista !== estado.actual) li.dataset.vista = "";
+    const b = document.createElement("button"); b.type = "button";
+    b.disabled = i > estado.actual;
+    b.setAttribute("aria-current", i === vista ? "step" : "false");
+    const n = document.createElement("span"); n.className = "n"; n.textContent = "Fase " + (i+1);
+    const t = document.createElement("span"); t.className = "t"; t.textContent = f.nombre;
+    b.append(n, t); b.addEventListener("click", () => { vista = i; confirmando = null; pintar(); });
+    li.append(b); ol.append(li);
+  });
+}
+
+function burbuja(m, extraClase){
+  const div = document.createElement("div");
+  div.className = "msg " + (m.role === "user" ? "user" : "agent") + (extraClase ? " " + extraClase : "");
+  const q = document.createElement("div"); q.className = "quien";
+  q.textContent = m.role === "user" ? (m.auto ? "Traspaso de la fase anterior" : "Tú") : "Agente Villanueva";
+  const c = document.createElement("div"); c.className = "cuerpo";
+  if (m.role === "user") c.textContent = m.content; else c.innerHTML = md(m.content);
+  div.append(q, c); return div;
+}
+
+function pintarMensajes(){
+  const cont = $("mensajes"); cont.textContent = "";
+  const f = estado.fases[vista];
+  f.mensajes.forEach(m => cont.append(burbuja(m, m.auto ? "traspaso" : "")));
+  const intro = $("intro");
+  intro.hidden = f.mensajes.length > 0;
+  $("intro-titulo").textContent = "Fase " + (vista+1) + " · " + FASES[vista].nombre;
+  $("intro-texto").textContent = FASES[vista].intro + (vista === 0 ? " Cuéntale al agente tu situación con tus palabras; él te irá preguntando." : "");
+  const ej = $("intro-ejemplo"); ej.textContent = "";
+  if (vista === estado.actual && vista === 0){
+    ej.append("¿No sabes cómo empezar? ");
+    const b = document.createElement("button"); b.type = "button"; b.textContent = "Usar un ejemplo";
+    b.addEventListener("click", () => { $("entrada").value = FASES[vista].ejemplo; $("entrada").focus(); });
+    ej.append(b);
+  }
+}
+
+function pintarFin(){
+  const cont = $("bloque-fin"); cont.textContent = "";
+  const f = estado.fases[vista];
+  const tieneRespuesta = f.mensajes.some(m => m.role === "assistant");
+  if (vista !== estado.actual || !tieneRespuesta || ocupado) return;
+  const box = document.createElement("div"); box.className = "fase-fin";
+  const p = document.createElement("p");
+  const acc = document.createElement("div"); acc.className = "acciones";
+  if (vista === FASES.length - 1){
+    p.textContent = "Es la última fase. Cuando tengas la oferta y el contenido que necesitas, valora la fase abajo. Puedes copiar toda la conversación para guardarla.";
+  } else if (confirmando === vista){
+    p.textContent = "Se enviará al agente de la fase siguiente el bloque de traspaso de esta fase (o sus últimas respuestas si no hay traspaso). Esta fase quedará cerrada.";
+    const si = document.createElement("button"); si.className = "b primario"; si.type = "button"; si.textContent = "Sí, pasar a " + FASES[vista+1].nombre;
+    si.addEventListener("click", pasarFase);
+    const no = document.createElement("button"); no.className = "b"; no.type = "button"; no.textContent = "Seguir en esta fase";
+    no.addEventListener("click", () => { confirmando = null; pintar(); });
+    acc.append(si, no);
+  } else {
+    p.textContent = "¿Has terminado esta fase? Pasa a la siguiente y el agente recibirá lo trabajado aquí.";
+    const b = document.createElement("button"); b.className = "b primario"; b.type = "button"; b.textContent = "Pasar a la siguiente fase";
+    b.addEventListener("click", () => { confirmando = vista; pintar(); });
+    acc.append(b);
+  }
+  const copiar = document.createElement("button"); copiar.className = "b"; copiar.type = "button"; copiar.textContent = "Copiar conversación";
+  copiar.addEventListener("click", () => copiarTexto(textoConversacion(), copiar));
+  acc.append(copiar);
+  box.append(p, acc); cont.append(box);
+}
+
+function pintarValorar(){
+  const cont = $("bloque-valorar"); cont.textContent = "";
+  const f = estado.fases[vista];
+  if (!f.mensajes.some(m => m.role === "assistant") || ocupado) return;
+  const box = document.createElement("form"); box.className = "valorar";
+  const h = document.createElement("h3"); h.textContent = "¿Qué te ha parecido la fase «" + FASES[vista].nombre + "»?";
+  const notas = document.createElement("div"); notas.className = "notas"; notas.setAttribute("role", "radiogroup"); notas.setAttribute("aria-label", "Nota del 1 al 5");
+  const previa = (f.valoracion || {});
+  for (let n = 1; n <= 5; n++){
+    const l = document.createElement("label");
+    const r = document.createElement("input"); r.type = "radio"; r.name = "nota-" + vista; r.value = String(n); r.id = "nota-" + vista + "-" + n;
+    if (previa.nota === n) r.checked = true;
+    const s = document.createElement("span"); s.textContent = n;
+    l.append(r, s); notas.append(l);
+  }
+  const ta = document.createElement("textarea"); ta.id = "comentario-" + vista; ta.placeholder = "Qué te ha servido, qué sobraba, qué echaste en falta…"; ta.value = previa.comentario || "";
+  const acc = document.createElement("div"); acc.className = "acciones";
+  const b = document.createElement("button"); b.className = "b"; b.type = "submit"; b.textContent = "Enviar valoración";
+  const est = document.createElement("span"); est.className = "estado-val"; est.textContent = previa.enviada ? "Valoración enviada. Puedes cambiarla." : "";
+  acc.append(b, est);
+  box.append(h, notas, ta, acc);
+  box.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const sel = box.querySelector("input:checked");
+    if (!sel){ est.textContent = "Elige una nota del 1 al 5."; return; }
+    const val = {nota:Number(sel.value), comentario:ta.value.trim(), fecha:new Date().toISOString()};
+    f.valoracion = Object.assign({}, val, {enviada:false}); guardar();
+    b.disabled = true; est.textContent = "Enviando…";
+    const ok = await enviarValoracion(FASES[vista].id, val);
+    b.disabled = false;
+    if (ok){ f.valoracion.enviada = true; guardar(); est.textContent = "Valoración enviada. Gracias."; }
+    else {
+      est.textContent = "No se ha podido guardar desde tu cuenta. Copia la valoración y envíasela a quien te invitó.";
+      const c = document.createElement("button"); c.className = "b"; c.type = "button"; c.textContent = "Copiar valoración";
+      c.addEventListener("click", () => copiarTexto("Agente Villanueva · " + FASES[vista].nombre + " · Nota " + val.nota + "/5\n" + val.comentario, c));
+      acc.append(c);
+    }
+  });
+  cont.append(box);
+}
+
+function pintarReinicio(){
+  const cont = $("reinicio"); cont.textContent = "";
+  const hay = estado.fases.some(f => f.mensajes.length);
+  if (!hay) return;
+  if (confirmando === "reinicio"){
+    cont.append("¿Borrar las cuatro fases de este navegador? ");
+    const si = document.createElement("button"); si.type = "button"; si.textContent = "Sí, borrar";
+    si.addEventListener("click", () => { estado = nuevo(); vista = 0; confirmando = null; guardar(); pintar(); });
+    const no = document.createElement("button"); no.type = "button"; no.textContent = "Cancelar";
+    no.addEventListener("click", () => { confirmando = null; pintar(); });
+    cont.append(si, " · ", no);
+  } else {
+    const b = document.createElement("button"); b.type = "button"; b.textContent = "Empezar de nuevo";
+    b.addEventListener("click", () => { confirmando = "reinicio"; pintar(); });
+    cont.append(b);
+  }
+}
+
+function pintarComposer(){
+  const editable = vista === estado.actual;
+  const ta = $("entrada");
+  ta.disabled = !editable || ocupado || !!sinClaude;
+  ta.placeholder = sinClaude ? "El chat no está disponible en esta vista." :
+    !editable ? "Estás viendo una fase cerrada. Vuelve a la fase " + (estado.actual+1) + " para seguir." :
+    estado.fases[vista].mensajes.length ? "Responde al agente…" : "Cuéntale tu situación al agente…";
+  $("enviar").disabled = ta.disabled;
+  $("enviar").hidden = ocupado;
+  $("detener").hidden = !ocupado;
+  const f = estado.fases[estado.actual];
+  const ult = f.mensajes[f.mensajes.length - 1];
+  if (editable && !ocupado && ult && ult.role === "user" && !sinClaude){
+    $("enviar").textContent = "Reintentar"; $("enviar").dataset.reintentar = "1";
+  } else { $("enviar").textContent = "Enviar"; delete $("enviar").dataset.reintentar; }
+}
+
+function pintar(){ pintarPasos(); pintarMensajes(); pintarFin(); pintarValorar(); pintarReinicio(); pintarComposer(); }
+
+function aviso(texto, tipo){
+  const a = $("avisos"); a.textContent = "";
+  if (!texto) return;
+  const d = document.createElement("div"); d.className = "aviso" + (tipo === "error" ? " error" : ""); d.textContent = texto; a.append(d);
+}
+
+/* ---------- Conversación ---------- */
+async function pedir(){
+  if (!sample || ocupado) return;
+  const i = estado.actual, f = estado.fases[i];
+  ocupado = true; aviso(""); pintar();
+  const div = burbuja({role:"assistant", content:""}); const cuerpo = div.querySelector(".cuerpo");
+  cuerpo.innerHTML = '<p class="pensando">Pensando</p>'; $("mensajes").append(div);
+  div.scrollIntoView({block:"nearest"});
+  let pend = false, ultimo = "";
+  ctl = new AbortController();
+  try{
+    const r = await sample(entrada(i), {cache:false, signal:ctl.signal, modelTier:tier, onText:({text}) => {
+      ultimo = text; if (pend) return; pend = true;
+      requestAnimationFrame(() => { pend = false; cuerpo.innerHTML = md(ultimo); });
+    }});
+    let texto = r.text;
+    if (r.truncated) texto += "\n\n_(La respuesta se ha cortado por longitud. Escribe «sigue» para que continúe.)_";
+    f.mensajes.push({role:"assistant", content:texto});
+  }catch(e){
+    const code = e && e.code;
+    if (e && e.text && code !== "refused"){ f.mensajes.push({role:"assistant", content:e.text + "\n\n_(Respuesta interrumpida.)_"}); }
+    if (code === "not_granted" || code === "sampling_disabled" || code === "not_declared" || code === "capability_disabled" || code === "capability_removed"){
+      sinClaude = code; aviso("Para usar el agente tienes que permitir que esta página use tu cuenta de Claude. Si lo rechazaste, vuelve a abrir la página.", "error");
+    } else if (code === "rate_limited"){ aviso("Has llegado al límite de uso de tu cuenta de Claude por ahora. Espera un rato y pulsa «Reintentar».", "error");
+    } else if (code === "session_expired"){ aviso("Tu sesión de Claude ha caducado. Vuelve a iniciar sesión y pulsa «Reintentar».", "error");
+    } else if (code === "prompt_too_large"){ aviso("La conversación es demasiado larga. Pasa a la siguiente fase o empieza de nuevo.", "error");
+    } else if (code === "refused"){ aviso("Claude no ha podido responder a ese mensaje. Prueba a decirlo de otra forma.", "error");
+    } else if (code !== "cancelled"){ aviso("No se ha podido obtener respuesta. Pulsa «Reintentar» en un momento.", "error"); }
+  }finally{
+    ocupado = false; ctl = null; guardar(); pintar();
+    const ms = $("mensajes").lastElementChild; if (ms) ms.scrollIntoView({block:"nearest"});
+  }
+}
+
+function enviar(){
+  if (ocupado || sinClaude) return;
+  if ($("enviar").dataset.reintentar){ pedir(); return; }
+  const ta = $("entrada"); const t = ta.value.trim(); if (!t) return;
+  if (!sample){ aviso("Conectando con Claude… inténtalo de nuevo en unos segundos."); return; }
+  estado.fases[estado.actual].mensajes.push({role:"user", content:t}); ta.value = ""; guardar();
+  pedir();
+}
+
+function pasarFase(){
+  const i = estado.actual; if (i >= FASES.length - 1 || ocupado) return;
+  const t = traspaso(i);
+  estado.fases[i].cerrada = true; estado.actual = i + 1; vista = i + 1; confirmando = null;
+  estado.fases[i+1].mensajes.push({role:"user", auto:true, content:"Vengo de la fase anterior («" + FASES[i].nombre + "»). Esto es lo que salió:\n\n" + t});
+  guardar(); pedir();
+}
+
+function textoConversacion(){
+  return estado.fases.map((f, i) => f.mensajes.length ? "## Fase " + (i+1) + " · " + FASES[i].nombre + "\n\n" +
+    f.mensajes.map(m => (m.role === "user" ? "### Tú\n\n" : "### Agente Villanueva\n\n") + m.content).join("\n\n") : "").filter(Boolean).join("\n\n");
+}
+
+function copiarTexto(t, boton){
+  const ok = () => { const o = boton.textContent; boton.textContent = "Copiado"; setTimeout(() => boton.textContent = o, 1600); };
+  try{
+    navigator.clipboard.writeText(t).then(ok, () => fallback());
+  }catch(e){ fallback(); }
+  function fallback(){
+    const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.append(ta); ta.select(); try{ document.execCommand("copy"); ok(); }catch(e){} ta.remove();
+  }
+}
+
+/* ---------- Valoraciones ---------- */
+async function enviarValoracion(fase, val){
+  try{
+    if (!db || !uid) return false;
+    const ref = db.doc("valoraciones/" + uid);
+    const snap = await ref.get();
+    const datos = snap.exists ? (snap.data() || {}) : {};
+    const fases = Object.assign({}, datos.fases || {}); fases[fase] = val;
+    await ref.set({fases, actualizado:val.fecha});
+    return true;
+  }catch(e){ return false; }
+}
+
+async function panelDueno(){
+  try{
+    if (panelHecho || !user || !db) return;
+    panelHecho = true;
+    if (!(await user.isOwner())) return;
+    const cont = $("panel-dueno");
+    const box = document.createElement("section"); box.className = "panel";
+    const h = document.createElement("h3"); h.textContent = "Valoraciones de los probadores";
+    const cuerpo = document.createElement("div");
+    const vacio = document.createElement("p"); vacio.className = "vacio"; vacio.textContent = "Aún no hay valoraciones. Aparecerán aquí cuando los probadores valoren alguna fase. Solo tú ves este panel.";
+    cuerpo.append(vacio); box.append(h, cuerpo); cont.append(box);
+    const timer = setTimeout(() => { vacio.textContent = "No se han podido cargar las valoraciones."; }, 10000);
+    db.collection("valoraciones").onSnapshot(async (q) => {
+      clearTimeout(timer);
+      const filas = [];
+      q.docs.forEach(d => { const f = (d.data() || {}).fases || {};
+        FASES.forEach(F => { if (f[F.id]) filas.push({quien:d.id, fase:F.nombre, nota:f[F.id].nota, comentario:f[F.id].comentario || "", fecha:f[F.id].fecha || ""}); }); });
+      cuerpo.textContent = "";
+      if (!filas.length){ cuerpo.append(vacio); vacio.textContent = "Aún no hay valoraciones. Aparecerán aquí cuando los probadores valoren alguna fase. Solo tú ves este panel."; return; }
+      let nombres = {};
+      try{ nombres = await user.profiles([...new Set(filas.map(f => f.quien))]); }catch(e){}
+      const wrap = document.createElement("div"); wrap.style.overflowX = "auto";
+      const t = document.createElement("table");
+      t.innerHTML = "<thead><tr><th>Probador</th><th>Fase</th><th>Nota</th><th>Comentario</th></tr></thead>";
+      const tb = document.createElement("tbody");
+      filas.sort((a, b) => b.fecha.localeCompare(a.fecha)).forEach(f => {
+        const tr = document.createElement("tr");
+        const c1 = document.createElement("td"); c1.textContent = (nombres[f.quien] && nombres[f.quien].name) || "Probador";
+        const c2 = document.createElement("td"); c2.textContent = f.fase;
+        const c3 = document.createElement("td"); c3.className = "nota"; c3.textContent = f.nota + "/5";
+        const c4 = document.createElement("td"); c4.textContent = f.comentario || "—";
+        tr.append(c1, c2, c3, c4); tb.append(tr);
+      });
+      t.append(tb); wrap.append(t); cuerpo.append(wrap);
+    }, () => { clearTimeout(timer); vacio.textContent = "No se han podido cargar las valoraciones."; });
+  }catch(e){}
+}
+
+/* ---------- Arranque ---------- */
+$("enviar").addEventListener("click", enviar);
+$("detener").addEventListener("click", () => { if (ctl) ctl.abort(); });
+$("entrada").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)){ e.preventDefault(); enviar(); } });
+pintar();
+
+if (!window.claude || !window.claude.use){
+  sinClaude = "sin_visor"; aviso("Abre esta página desde claude.ai para usar el agente.", "error"); pintar();
+} else {
+  claude.use("sample").then(async (s) => {
+    if (!s){ sinClaude = "sin_sample"; aviso("El chat no está disponible en esta vista. Ábrela con tu cuenta de Claude en claude.ai.", "error"); pintar(); return; }
+    sample = s;
+    try{ const lim = await s.limits(); if (lim && lim.modelTiers && lim.modelTiers.includes("complex")) tier = "complex"; }catch(e){}
+    pintar();
+  });
+  claude.use("user").then(async (u) => { user = u; if (u){ try{ uid = await u.id(); }catch(e){} } panelDueno(); });
+  claude.use("db").then((d) => { db = d; panelDueno(); });
+}
+})();
+</script>
