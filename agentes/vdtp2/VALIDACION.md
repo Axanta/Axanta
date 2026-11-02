@@ -1,17 +1,17 @@
 # Validación de los agentes vdtp2
 
-Estado a 2026-11-01 (23:05 UTC). Versión congelada en `versiones/2026-11-01/`, con sumas SHA-256 en `SHA256SUMS`.
+Estado a 2026-11-02. Versión vigente congelada en `versiones/2026-11-02/`, con sumas SHA-256 en `SHA256SUMS`. La versión anterior queda en `versiones/2026-11-01/`.
 
 ## Versiones validadas
 
 | Agente | Archivo vivo | Copia congelada | Versión |
 |---|---|---|---|
-| Cliente ideal | `instrucciones.md` | `versiones/2026-11-01/cliente-ideal-v1.7.md` | v1.7 |
-| Descubre tu idea | `descubre.md` | `versiones/2026-11-01/descubre-v1.0.md` | v1.0 |
-| Destino | `destino.md` | `versiones/2026-11-01/destino-v1.0.md` | v1.0 |
-| Producto de entrada | `producto-entrada.md` | `versiones/2026-11-01/producto-entrada-v1.0.md` | v1.0 |
+| Cliente ideal | `instrucciones.md` | `versiones/2026-11-02/cliente-ideal-v1.7.md` | v1.7 |
+| Descubre tu idea | `descubre.md` | `versiones/2026-11-02/descubre-v1.1.md` | v1.1 |
+| Destino | `destino.md` | `versiones/2026-11-02/destino-v1.1.md` | v1.1 |
+| Producto de entrada | `producto-entrada.md` | `versiones/2026-11-02/producto-entrada-v1.1.md` | v1.1 |
 
-Los tres agentes v1.0 se guardaron en el commit `610321b`, **antes** de consultar los métodos de VDTP de esas fases. Así no hay contaminación con su contenido.
+Las versiones v1.0 de los tres agentes se guardaron en el commit `610321b`, **antes** de consultar los métodos de VDTP de esas fases. Así no hay contaminación con su contenido.
 
 ## Cómo se ha validado
 
@@ -76,11 +76,18 @@ Detalle y motivos del juez: `pruebas/competicion/juicio-andres.md`.
 
 ## 4. Casos difíciles por fase
 
-| Agente | VDTP (juez) | vdtp2 (juez) |
-|---|---|---|
-| Destino (ansiedad, ingresos sin datos, fecha de caducidad) | 3/6 | pendiente |
-| Producto de entrada (deudas, poca capacidad) | 1/5 | pendiente |
-| Descubre (salud mental, fontanero) | 4/4 | pendiente |
+| Agente | VDTP (juez) | vdtp2 v1.0 (juez) | vdtp2 v1.1 (automáticas · juez) |
+|---|---|---|---|
+| Destino (ansiedad, ingresos sin datos, fecha de caducidad) | 3/6 | 5/6 | **9/9 · 6/6** |
+| Producto de entrada (deudas, poca capacidad) | 1/5 | 5/5 | **6/6 · 5/5** |
+| Descubre (salud mental, fontanero) | 4/4 | 4/4 | **6/6 · 4/4** |
+| **Total** | **8/15** | **14/15** | **21/21 · 15/15** |
+
+Cambios de la v1.0 a la v1.1, salidos de fallos reales:
+- **Destino:** la familia "resultado con plazo" proponía "Duérmete antes en dos semanas" para un programa de ansiedad. En sectores sensibles, esa familia ya solo usa datos del producto, nunca resultados de salud, dinero o relaciones con plazo.
+- **Producto de entrada y Descubre:** tablas de puntuación de hasta 4 columnas, con el desglose en lista.
+
+Nota: en la primera ejecución de Producto v1.1, el caso de deudas salió 0/3 porque el JSON del juez era inválido (el juez decía "cumple": true). El banco ahora repite la llamada al juez en ese caso. La segunda ejecución salió 3/3.
 
 Casos en `pruebas/casos_destino.json`, `casos_producto.json` y `casos_descubre.json`.
 

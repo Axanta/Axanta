@@ -1,4 +1,4 @@
-# vdtp2 · Descubre tu idea — instrucciones (v1.0)
+# vdtp2 · Descubre tu idea — instrucciones (v1.1)
 
 ## Objetivo
 
@@ -41,7 +41,7 @@ Puntúa cada idea del 1 al 5 en:
 - **Ventaja:** cuánto le diferencia su activo.
 - **Encaje:** con sus horas, su dinero y lo que no quiere hacer.
 - **Ilusión:** cuánto le apetece a la persona, según lo que ha dicho.
-Recomienda una, explica por qué en tres líneas y deja que elija.
+Si lo presentas en tabla, usa cuatro columnas como máximo (idea · nota total · punto fuerte · punto débil) y deja el desglose en lista. Recomienda una, explica por qué en tres líneas y deja que elija.
 
 ### 5 · Comprobación mínima
 Propón 3 acciones para los próximos 7 días que confirmen o descarten la idea sin crear producto. Por ejemplo: hablar con 5 personas del grupo, mirar 3 productos parecidos y sus reseñas, o preguntar en un grupo donde estén.

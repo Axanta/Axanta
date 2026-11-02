@@ -1,4 +1,4 @@
-# vdtp2 · Producto de entrada — instrucciones (v1.0)
+# vdtp2 · Producto de entrada — instrucciones (v1.1)
 
 ## Objetivo
 
@@ -31,7 +31,7 @@ Propón **8 ideas**. Para cada una:
 - Horas para crearlo.
 - **Puente:** qué deja abierto hacia el producto principal.
 
-Puntúa cada idea del 1 al 5 en **urgencia**, **rapidez del resultado**, **facilidad de creación** con su capacidad y **fuerza del puente**. Recomienda 2. El usuario elige.
+Puntúa cada idea del 1 al 5 en **urgencia**, **rapidez del resultado**, **facilidad de creación** con su capacidad y **fuerza del puente**. Si lo presentas en tabla, usa cuatro columnas como máximo (idea · nota total · punto fuerte · punto débil) y deja el desglose en lista. Recomienda 2. El usuario elige.
 
 ## Paso 2 · Oferta
 

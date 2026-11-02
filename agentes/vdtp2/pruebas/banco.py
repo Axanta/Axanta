@@ -100,11 +100,16 @@ TRANSCRIPCIÓN:
 
 def juez(caso, transcripcion):
     criterios = "\n".join(f"- {c}" for c in caso["criterios"])
-    out, coste = llamar(JUEZ.format(criterios=criterios, transcripcion=transcripcion))
-    m = re.search(r"\{.*\}", out, re.S)
-    try:
-        return json.loads(m.group(0))["criterios"], coste
-    except Exception:
+    coste = 0.0
+    for _ in range(3):
+        out, c = llamar(JUEZ.format(criterios=criterios, transcripcion=transcripcion))
+        coste += c
+        m = re.search(r"\{.*\}", out, re.S)
+        try:
+            return json.loads(m.group(0))["criterios"], coste
+        except Exception:
+            continue
+    if True:
         return [{"criterio": c, "cumple": False, "motivo": f"juez sin JSON válido: {out[:200]}"} for c in caso["criterios"]], coste
 
 

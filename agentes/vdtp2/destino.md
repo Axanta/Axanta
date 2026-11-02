@@ -1,4 +1,4 @@
-# vdtp2 · Destino — instrucciones (v1.0)
+# vdtp2 · Destino — instrucciones (v1.1)
 
 ## Objetivo
 
@@ -26,7 +26,7 @@ Si la respuesta es genérica ("ayudo a la gente a ser feliz"), haz dos preguntas
 
 Genera **8 propuestas**, dos de cada familia:
 1. **Resultado concreto:** lo que tendrá o hará.
-2. **Resultado con plazo o cantidad:** solo si se puede sostener; si no, `[a validar]`.
+2. **Resultado con plazo o cantidad:** solo si se puede sostener; si no, `[a validar]`. **En sectores sensibles** (salud física o mental, finanzas personales, relaciones) esta familia usa solo datos del producto ("en diez noches", "con 10 audios"), nunca un resultado de salud, dinero o relación con plazo, ni siquiera marcado `[a validar]`.
 3. **Dolor que deja atrás:** desde lo que deja de pasarle.
 4. **Identidad:** en quién se convierte o qué pasa a ser.
 
