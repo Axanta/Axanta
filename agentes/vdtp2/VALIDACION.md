@@ -70,9 +70,29 @@ Detalle y motivos del juez: `pruebas/competicion/juicio-andres.md`.
 
 **Limitación:** en la fase de cliente ideal, la versión de VDTP de la prueba solo tenía los bloques de su primer bloque. El juez anotó un "fallo de acceso" al final que viene de la prueba, no del agente.
 
-## 3. Competición · persona Lucía (maestra de infantil, Valencia)
+## 3. Competición por fases · persona Lucía (maestra de infantil, Valencia)
 
-**Pendiente.** Las respuestas de VDTP ya están generadas (`pruebas/referencia-vdtp/cadena-lucia/`). La cadena de vdtp2 y su juicio están en marcha. Resultado en `pruebas/competicion/juicio-lucia.md` cuando termine.
+Juicio ciego, A = VDTP, B = vdtp2 (cliente ideal v1.7; Descubre, Destino y Producto de entrada v1.0, porque el programa lee los prompts al arrancar, antes del cambio a v1.1).
+
+| Fase | VDTP | vdtp2 | Turnos VDTP / vdtp2 | Ganador |
+|---|---|---|---|---|
+| Descubre | 21,0 | **27,0** | 9 / 10 | vdtp2 (2 de 2) |
+| Cliente ideal | 21,5 | **27,0** | 6 / 7 | vdtp2 (2 de 2) |
+| Destino | 20,0 | **26,5** | 4 / 2 | vdtp2 (2 de 2) |
+| Producto de entrada | 19,0 | **26,0** | 5 / 3 | vdtp2 (2 de 2) |
+
+| Criterio (sobre 5) | VDTP | vdtp2 |
+|---|---|---|
+| Utilidad | 3,00 | **5,00** |
+| Profundidad | 2,75 | **5,00** |
+| Fiabilidad | 2,50 | **5,00** |
+| Adaptación a la persona | 3,38 | **5,00** |
+| Poca carga para el usuario | **4,50** | 2,88 |
+| Claridad | **4,25** | 3,75 |
+
+Detalle y motivos del juez: `pruebas/competicion/juicio-lucia.md`.
+
+**Resumen de las dos personas:** vdtp2 gana las 8 fases juzgadas (4 con Andrés y 4 con Lucía), y las dos pasadas coinciden en todas. El patrón se repite: vdtp2 gana con claridad en utilidad, profundidad, fiabilidad y adaptación, y VDTP gana en poca carga para el usuario y en claridad. **La carga es la mejora prioritaria para la siguiente versión.**
 
 ## 4. Casos difíciles por fase
 
