@@ -1,13 +1,13 @@
-# Comparativa · VDTP Avatar frente a vdtp2
+# Comparativa · VDTP Avatar frente a Villanueva
 
-Fecha: 2026-11-01 · Versión de vdtp2: borrador v0.1 (`instrucciones.md`)
+Fecha: 2026-11-01 · Versión de Villanueva: borrador v0.1 (`instrucciones.md`)
 
 ## Cómo se ha hecho
 
 - **Mismo caso y mismos mensajes** para los dos agentes.
 - **VDTP Avatar:** activado con `activar_agente` y siguiendo su prompt. Se consultaron con `consultar_metodo` los bloques necesarios ("Impulsos ocultos" y "Objeciones").
-- **vdtp2:** siguiendo `instrucciones.md`.
-- **Límite importante:** los dos agentes los ejecuta el mismo modelo y quien ejecuta ha diseñado vdtp2. La prueba mide la diferencia entre instrucciones, no entre modelos, y tiene sesgo a favor de vdtp2. Para una valoración limpia, conviene repetirla a ciegas (ver el final).
+- **Villanueva:** siguiendo `instrucciones.md`.
+- **Límite importante:** los dos agentes los ejecuta el mismo modelo y quien ejecuta ha diseñado Villanueva. La prueba mide la diferencia entre instrucciones, no entre modelos, y tiene sesgo a favor de Villanueva. Para una valoración limpia, conviene repetirla a ciegas (ver el final).
 
 ### Caso de prueba
 
@@ -35,7 +35,7 @@ Fecha: 2026-11-01 · Versión de vdtp2: borrador v0.1 (`instrucciones.md`)
 
 Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No pregunta por datos reales del cliente.
 
-**vdtp2**
+**Villanueva**
 > Lo que he entendido:
 > - Cliente: dueño o gerente de pyme industrial con máquinas antiguas, de segunda mano o importadas.
 > - Producto: un manual; el taller lo ejecuta con su gente.
@@ -45,7 +45,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 >
 > Si no tienes esos datos, sigo y lo marco como hipótesis.
 
-**Lectura:** vdtp2 fija las restricciones desde el principio y busca datos reales. VDTP entra más rápido, pero sin preparar el terreno.
+**Lectura:** Villanueva fija las restricciones desde el principio y busca datos reales. VDTP entra más rápido, pero sin preparar el terreno.
 
 ---
 
@@ -60,7 +60,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 >
 > Escribe "SÍ" para seguir, "NO" para rehacerlo, o escribe tu propio texto.
 
-**vdtp2**
+**Villanueva**
 > | # | Impulso | Qué desea | Por qué no lo dice | Cómo se nota | Lo que piensa por dentro |
 > |---|---|---|---|---|---|
 > | 1 | Dormir tranquilo | Quitarse el peso de la responsabilidad si alguien se lesiona | En su mundo se habla de "cumplir", no de miedo | Pregunta varias veces "¿con esto ya estoy bien?" | "Si pasa algo, el que responde soy yo." |
@@ -75,7 +75,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 >
 > **OK**, **rehacer** o **ampliar** (por qué le pasa · frases literales · lo que dice frente a lo que siente · escenas · por cada cara · cronología · implicación para comunicar · contradicciones).
 
-**Lectura:** el contenido de base es casi el mismo; los dos llegan a los mismos impulsos. vdtp2 lo entrega con campos fijos, frases literales, el impulso que lo resume todo y la etiqueta de fiabilidad. VDTP lo da en prosa, más corto y sin distinguir hipótesis de dato.
+**Lectura:** el contenido de base es casi el mismo; los dos llegan a los mismos impulsos. Villanueva lo entrega con campos fijos, frases literales, el impulso que lo resume todo y la etiqueta de fiabilidad. VDTP lo da en prosa, más corto y sin distinguir hipótesis de dato.
 
 ---
 
@@ -90,7 +90,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 >
 > "SÍ", "NO" o tu texto.
 
-**vdtp2**
+**Villanueva**
 > No especificas dirección. Elijo **lo que dice frente a lo que siente**, que es lo que más aporta tras la primera tanda:
 >
 > | Lo que dice | Lo que siente | Impulso real |
@@ -105,7 +105,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 >
 > ¿Seguimos ampliando con **escenas** o **frases literales**, o damos el punto por cerrado?
 
-**Lectura:** VDTP amplía bien en volumen: más detalle y dos impulsos nuevos. vdtp2 amplía en profundidad: cambia de nivel y saca una conclusión que se puede usar en la venta. Es el mismo patrón que vimos con el fisioterapeuta, pero aquí el agente lo hace solo.
+**Lectura:** VDTP amplía bien en volumen: más detalle y dos impulsos nuevos. Villanueva amplía en profundidad: cambia de nivel y saca una conclusión que se puede usar en la venta. Es el mismo patrón que vimos con el fisioterapeuta, pero aquí el agente lo hace solo.
 
 ---
 
@@ -123,7 +123,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 >
 > "SÍ", "NO" o tu texto.
 
-**vdtp2**
+**Villanueva**
 > | Categoría | Frase literal | Lo que hay detrás | Lo que necesita ver |
 > |---|---|---|---|
 > | Capacidad | "Esto necesita un experto, no un manual" | Asocia seguridad con ingenieros | Su gente ya conoce la máquina; le falta el método |
@@ -138,7 +138,7 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 > **Miedo de fondo:** "¿de verdad puedo hacerlo yo?"
 > **Comprobación de restricciones:** ninguna respuesta promete visita, firma ni venta de material.
 
-**Lectura:** es la mayor diferencia de la prueba. vdtp2 detecta las objeciones que **nacen de las restricciones del negocio** ("¿Quién firma?", "¿Vale ante Inspección?") y da la respuesta comercial para cada una. VDTP da objeciones genéricas correctas, pero no relaciona lo que dice con las restricciones que le dimos en T1, y no da respuesta para cada objeción porque su método no lo pide.
+**Lectura:** es la mayor diferencia de la prueba. Villanueva detecta las objeciones que **nacen de las restricciones del negocio** ("¿Quién firma?", "¿Vale ante Inspección?") y da la respuesta comercial para cada una. VDTP da objeciones genéricas correctas, pero no relaciona lo que dice con las restricciones que le dimos en T1, y no da respuesta para cada objeción porque su método no lo pide.
 
 ---
 
@@ -147,10 +147,10 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 **VDTP Avatar**
 > Estamos aquí para trabajar tu avatar. ¡Foco!
 
-**vdtp2**
+**Villanueva**
 > Eso es de la fase de contenidos; aquí no lo hago. Lo que sí te dejo es el material que lo alimentará: el mensaje emocional central y las frases literales del avatar, que tendrás en el documento final. ¿Seguimos con nivel y conciencia?
 
-**Lectura:** los dos se mantienen en su tema. VDTP es más seco; vdtp2 explica a dónde ir y qué se lleva el usuario.
+**Lectura:** los dos se mantienen en su tema. VDTP es más seco; Villanueva explica a dónde ir y qué se lleva el usuario.
 
 ---
 
@@ -159,14 +159,14 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 **VDTP Avatar**
 > Estamos aquí para trabajar tu avatar. ¡Foco!
 
-**vdtp2**
+**Villanueva**
 > No invento testimonios: si alguien lo comprueba, te hunde la credibilidad, y en publicidad puede ser engañoso. Te dejo la estructura para cuando lo tengas:
 >
 > "[CASO REAL: nombre o cargo, tipo de taller] tenía [máquina y problema]. Con el manual, su [encargado o mantenimiento] [qué hizo] en [tiempo]. Hoy [resultado]."
 >
 > Para conseguirlo: un grupo piloto de 3-5 talleres que apliquen el manual a una máquina. Lo añado a pendientes.
 
-**Lectura:** los dos se niegan. VDTP no explica por qué ni da alternativa. vdtp2 deja una plantilla con huecos y un plan para conseguir el testimonio.
+**Lectura:** los dos se niegan. VDTP no explica por qué ni da alternativa. Villanueva deja una plantilla con huecos y un plan para conseguir el testimonio.
 
 ---
 
@@ -174,26 +174,26 @@ Repite el mensaje fijo aunque la frase ya está dada. Acepta saltar puntos. No p
 
 Escala del 1 al 5. Es una valoración del ejecutor y tiene sesgo.
 
-| Criterio | VDTP Avatar | vdtp2 | Comentario |
+| Criterio | VDTP Avatar | Villanueva | Comentario |
 |---|---|---|---|
 | Profundidad del contenido | 4 | 4 | El contenido de base es casi igual |
 | Estructura y facilidad de uso | 3 | 5 | Los campos fijos facilitan revisar y reutilizar |
-| Calidad de la ampliación | 3 | 5 | VDTP añade volumen; vdtp2 cambia de nivel |
+| Calidad de la ampliación | 3 | 5 | VDTP añade volumen; Villanueva cambia de nivel |
 | Coherencia con las restricciones | 2 | 5 | Es la diferencia principal (T4) |
 | Fiabilidad (dato frente a hipótesis) | 2 | 5 | VDTP no lo distingue en ningún punto |
 | Utilidad directa para copy | 3 | 5 | Respuestas a objeciones y contradicciones utilizables |
-| Rapidez y brevedad | 5 | 3 | vdtp2 pregunta más al arrancar y entrega textos más largos |
-| Manejo de peticiones fuera de alcance | 3 | 4 | Los dos se mantienen; vdtp2 orienta |
-| Integridad ante invenciones | 4 | 5 | Los dos se niegan; vdtp2 da alternativa |
+| Rapidez y brevedad | 5 | 3 | Villanueva pregunta más al arrancar y entrega textos más largos |
+| Manejo de peticiones fuera de alcance | 3 | 4 | Los dos se mantienen; Villanueva orienta |
+| Integridad ante invenciones | 4 | 5 | Los dos se niegan; Villanueva da alternativa |
 
 ## Conclusiones
 
 1. **El conocimiento de base es el mismo.** La diferencia está en la forma de trabajar, no en lo que sabe cada agente.
-2. **La gran ventaja de vdtp2 son las restricciones y las etiquetas.** Fijarlas al principio cambia la calidad de las objeciones y de los mensajes.
+2. **La gran ventaja de Villanueva son las restricciones y las etiquetas.** Fijarlas al principio cambia la calidad de las objeciones y de los mensajes.
 3. **VDTP gana en rapidez.** Para alguien que quiere avanzar sin pensar mucho, su ritmo de "propuesta → SÍ" es más ágil.
-4. **El resultado de VDTP depende de cuánto amplíe el usuario.** Para llegar a la riqueza de tus documentos hay que ampliar a mano; vdtp2 lo trae de serie.
+4. **El resultado de VDTP depende de cuánto amplíe el usuario.** Para llegar a la riqueza de tus documentos hay que ampliar a mano; Villanueva lo trae de serie.
 
-## Mejoras para vdtp2 v0.2
+## Mejoras para Villanueva v0.2
 
 - **Modo rápido:** permitir saltar las preguntas de arranque y entregar dos o tres puntos seguidos.
 - **Tablas más cortas en móvil:** ofrecer una lista como alternativa a las tablas de cinco columnas.

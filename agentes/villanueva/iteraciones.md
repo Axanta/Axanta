@@ -1,4 +1,4 @@
-# Registro de iteraciones · vdtp2 v0.3 → v1.2
+# Registro de iteraciones · Villanueva v0.3 → v1.2
 
 Fecha: 2026-11-01
 

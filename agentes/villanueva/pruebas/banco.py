@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Banco de pruebas de vdtp2.
+"""Banco de pruebas de Villanueva.
 
 Ejecuta cada caso de casos.json como conversación real con el CLI de Claude,
 usando instrucciones.md como prompt de sistema, y evalúa cada transcripción con:

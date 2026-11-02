@@ -1,4 +1,4 @@
-# vdtp2 · Agente de cliente ideal — instrucciones (v1.7)
+# Agente Villanueva · Cliente ideal — instrucciones (v1.7)
 
 > Historial de cambios: `iteraciones.md` (v0.3 → v1.2), `prueba-v0.2-yoga.md` (v0.2) y `comparativa.md` (v0.1).
 

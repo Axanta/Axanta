@@ -1,6 +1,10 @@
-# Validación de los agentes vdtp2
+# Validación del agente Villanueva
 
 Estado a 2026-11-02. Versión vigente congelada en `versiones/2026-11-02/`, con sumas SHA-256 en `SHA256SUMS`. La versión anterior queda en `versiones/2026-11-01/`.
+
+## Nombre
+
+El 2026-11-02 el proyecto pasó a llamarse **agente Villanueva** (antes, vdtp2). En los archivos vivos y en `versiones/2026-11-02/` solo cambia el título de la primera línea; las instrucciones son las mismas que se validaron. En los registros históricos de pruebas se mantiene el nombre vdtp2.
 
 ## Versiones validadas
 
@@ -42,20 +46,20 @@ Cambios de la v1.3 a la v1.7, todos salidos de fallos reales del banco:
 - **v1.6:** revisión antes de enviar (antítesis, deducciones, citas, plazos, restricciones, formato).
 - **v1.7:** prohibido escribir piezas de otras fases (posts, anuncios…), aunque se pidan como borrador.
 
-**Sesgo:** este banco se diseñó para medir lo que vdtp2 pretende hacer (etiquetas, `[CASO REAL]`, roles…). La puntuación de VDTP aquí indica sobre todo que no hace lo que vdtp2 hace, no que sea peor en todo.
+**Sesgo:** este banco se diseñó para medir lo que Villanueva pretende hacer (etiquetas, `[CASO REAL]`, roles…). La puntuación de VDTP aquí indica sobre todo que no hace lo que Villanueva hace, no que sea peor en todo.
 
 ## 2. Competición por fases · persona Andrés (electricista, Murcia)
 
-Juicio ciego, A = VDTP, B = vdtp2. Puntuación sobre 30 (6 criterios), media de las dos pasadas.
+Juicio ciego, A = VDTP, B = Villanueva. Puntuación sobre 30 (6 criterios), media de las dos pasadas.
 
-| Fase | VDTP | vdtp2 | Turnos VDTP / vdtp2 | Ganador |
+| Fase | VDTP | Villanueva | Turnos VDTP / Villanueva | Ganador |
 |---|---|---|---|---|
-| Descubre | 21,0 | **27,0** | 8 / 10 | vdtp2 (2 de 2) |
-| Cliente ideal | 18,5 | **28,0** | 6 / 4 | vdtp2 (2 de 2) |
-| Destino | 19,5 | **27,0** | 3 / 2 | vdtp2 (2 de 2) |
-| Producto de entrada | 19,5 | **25,0** | 5 / 3 | vdtp2 (2 de 2) |
+| Descubre | 21,0 | **27,0** | 8 / 10 | Villanueva (2 de 2) |
+| Cliente ideal | 18,5 | **28,0** | 6 / 4 | Villanueva (2 de 2) |
+| Destino | 19,5 | **27,0** | 3 / 2 | Villanueva (2 de 2) |
+| Producto de entrada | 19,5 | **25,0** | 5 / 3 | Villanueva (2 de 2) |
 
-| Criterio (sobre 5) | VDTP | vdtp2 |
+| Criterio (sobre 5) | VDTP | Villanueva |
 |---|---|---|
 | Utilidad | 3,25 | **4,75** |
 | Profundidad | 3,12 | **5,00** |
@@ -66,22 +70,22 @@ Juicio ciego, A = VDTP, B = vdtp2. Puntuación sobre 30 (6 criterios), media de 
 
 Detalle y motivos del juez: `pruebas/competicion/juicio-andres.md`.
 
-**Puntos débiles de vdtp2 que hay que trabajar:** carga para el usuario y claridad. Entrega más texto, más etiquetas y más preguntas por turno.
+**Puntos débiles de Villanueva que hay que trabajar:** carga para el usuario y claridad. Entrega más texto, más etiquetas y más preguntas por turno.
 
 **Limitación:** en la fase de cliente ideal, la versión de VDTP de la prueba solo tenía los bloques de su primer bloque. El juez anotó un "fallo de acceso" al final que viene de la prueba, no del agente.
 
 ## 3. Competición por fases · persona Lucía (maestra de infantil, Valencia)
 
-Juicio ciego, A = VDTP, B = vdtp2 (cliente ideal v1.7; Descubre, Destino y Producto de entrada v1.0, porque el programa lee los prompts al arrancar, antes del cambio a v1.1).
+Juicio ciego, A = VDTP, B = Villanueva (cliente ideal v1.7; Descubre, Destino y Producto de entrada v1.0, porque el programa lee los prompts al arrancar, antes del cambio a v1.1).
 
-| Fase | VDTP | vdtp2 | Turnos VDTP / vdtp2 | Ganador |
+| Fase | VDTP | Villanueva | Turnos VDTP / Villanueva | Ganador |
 |---|---|---|---|---|
-| Descubre | 21,0 | **27,0** | 9 / 10 | vdtp2 (2 de 2) |
-| Cliente ideal | 21,5 | **27,0** | 6 / 7 | vdtp2 (2 de 2) |
-| Destino | 20,0 | **26,5** | 4 / 2 | vdtp2 (2 de 2) |
-| Producto de entrada | 19,0 | **26,0** | 5 / 3 | vdtp2 (2 de 2) |
+| Descubre | 21,0 | **27,0** | 9 / 10 | Villanueva (2 de 2) |
+| Cliente ideal | 21,5 | **27,0** | 6 / 7 | Villanueva (2 de 2) |
+| Destino | 20,0 | **26,5** | 4 / 2 | Villanueva (2 de 2) |
+| Producto de entrada | 19,0 | **26,0** | 5 / 3 | Villanueva (2 de 2) |
 
-| Criterio (sobre 5) | VDTP | vdtp2 |
+| Criterio (sobre 5) | VDTP | Villanueva |
 |---|---|---|
 | Utilidad | 3,00 | **5,00** |
 | Profundidad | 2,75 | **5,00** |
@@ -92,11 +96,11 @@ Juicio ciego, A = VDTP, B = vdtp2 (cliente ideal v1.7; Descubre, Destino y Produ
 
 Detalle y motivos del juez: `pruebas/competicion/juicio-lucia.md`.
 
-**Resumen de las dos personas:** vdtp2 gana las 8 fases juzgadas (4 con Andrés y 4 con Lucía), y las dos pasadas coinciden en todas. El patrón se repite: vdtp2 gana con claridad en utilidad, profundidad, fiabilidad y adaptación, y VDTP gana en poca carga para el usuario y en claridad. **La carga es la mejora prioritaria para la siguiente versión.**
+**Resumen de las dos personas:** Villanueva gana las 8 fases juzgadas (4 con Andrés y 4 con Lucía), y las dos pasadas coinciden en todas. El patrón se repite: Villanueva gana con claridad en utilidad, profundidad, fiabilidad y adaptación, y VDTP gana en poca carga para el usuario y en claridad. **La carga es la mejora prioritaria para la siguiente versión.**
 
 ## 4. Casos difíciles por fase
 
-| Agente | VDTP (juez) | vdtp2 v1.0 (juez) | vdtp2 v1.1 (automáticas · juez) |
+| Agente | VDTP (juez) | Villanueva v1.0 (juez) | Villanueva v1.1 (automáticas · juez) |
 |---|---|---|---|
 | Destino (ansiedad, ingresos sin datos, fecha de caducidad) | 3/6 | 5/6 | **9/9 · 6/6** |
 | Producto de entrada (deudas, poca capacidad) | 1/5 | 5/5 | **6/6 · 5/5** |
@@ -120,6 +124,6 @@ Casos en `pruebas/casos_destino.json`, `casos_producto.json` y `casos_descubre.j
 
 ## Límites de toda la validación
 
-- Todas las ejecuciones las hace el mismo modelo, y las instrucciones de vdtp2 las escribió ese mismo modelo.
+- Todas las ejecuciones las hace el mismo modelo, y las instrucciones de Villanueva las escribió ese mismo modelo.
 - Las personas son simuladas. La validación que falta es con usuarios reales: se propone una prueba a ciegas con 2-3 personas en la presentación de la semana que viene.
 - Hay variación entre ejecuciones (ver v1.5 y v1.6). Las cifras son orientativas, no exactas.

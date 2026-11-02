@@ -1,4 +1,4 @@
-# Prueba de vdtp2 v0.2 · tema: profesoras de yoga
+# Prueba de Villanueva v0.2 · tema: profesoras de yoga
 
 Fecha: 2026-11-01 · Comparada con VDTP Avatar en los mismos mensajes.
 
@@ -7,7 +7,7 @@ Fecha: 2026-11-01 · Comparada con VDTP Avatar en los mismos mensajes.
 1. Comprobar las tres mejoras de la v0.2: modo rápido, formato lista para móvil y criterio explícito al ampliar.
 2. Ver si las diferencias de la primera comparativa (sector industrial) se mantienen en un tema muy distinto.
 
-**Mismo límite que en la comparativa anterior:** los dos agentes los ejecuta el mismo modelo, que además diseñó vdtp2. Hay sesgo a favor de vdtp2.
+**Mismo límite que en la comparativa anterior:** los dos agentes los ejecuta el mismo modelo, que además diseñó Villanueva. Hay sesgo a favor de Villanueva.
 
 ### Caso de prueba
 
@@ -38,7 +38,7 @@ Fecha: 2026-11-01 · Comparada con VDTP Avatar en los mismos mensajes.
 
 Ignora "ve rápido": entrega un solo punto, como marca su flujo. El formato es de párrafos, que se lee bien en el móvil. No menciona las restricciones (sin directo, sin corrección).
 
-**vdtp2 v0.2** *(modo rápido activado: el usuario lo pide y ya trae frase, producto y restricciones)*
+**Villanueva v0.2** *(modo rápido activado: el usuario lo pide y ya trae frase, producto y restricciones)*
 > Modo rápido. Te entrego tres puntos juntos. Lo que no me has dado lo marco como hipótesis.
 >
 > **Restricciones que voy a respetar:** curso grabado de 97 €, sin directo, sin corrección individual, Telegram moderado una vez por semana.
@@ -90,7 +90,7 @@ Respeta el modo rápido: tres puntos en un turno. Usa formato lista, sin tablas.
 
 Más detalle y dos impulsos nuevos. No explica cómo ha ampliado.
 
-**vdtp2 v0.2**
+**Villanueva v0.2**
 > Amplío con **frases literales**, porque a este punto le falta el lenguaje real de tu clienta, y es lo que más vas a usar en los textos.
 >
 > - **Ganar sin estar presente**
@@ -129,7 +129,7 @@ Dice qué dirección elige y por qué, con el criterio de la v0.2. Saca una cont
 
 Son las objeciones de una profesora **ante la idea de lanzar su curso**. Ninguna tiene que ver con las restricciones del curso que le vendes.
 
-**vdtp2 v0.2**
+**Villanueva v0.2**
 > Separo dos tipos de objeciones: las que tiene ella **para comprar tu curso** y las que le pondrán **sus alumnas** al suyo. Las dos te afectan.
 >
 > **Para comprar tu curso**
@@ -160,9 +160,9 @@ Detecta que en este negocio hay **dos niveles de cliente** (la profesora y sus a
 
 ## Resultado
 
-| Criterio | VDTP Avatar | vdtp2 v0.2 | Cambio frente a v0.1 |
+| Criterio | VDTP Avatar | Villanueva v0.2 | Cambio frente a v0.1 |
 |---|---|---|---|
-| Rapidez y brevedad | 4 | 4 | vdtp2 sube de 3 a 4 con el modo rápido |
+| Rapidez y brevedad | 4 | 4 | Villanueva sube de 3 a 4 con el modo rápido |
 | Lectura en móvil | 4 | 5 | Formato lista en lugar de tablas anchas |
 | Calidad de la ampliación | 3 | 5 | Ahora explica por qué elige cada dirección |
 | Coherencia con las restricciones | 2 | 5 | Se mantiene |
@@ -172,7 +172,7 @@ Detecta que en este negocio hay **dos niveles de cliente** (la profesora y sus a
 
 1. **Las mejoras de la v0.2 funcionan.** El modo rápido entrega tres puntos en un turno, el formato lista se lee bien en el móvil y la ampliación explica su elección.
 2. **La diferencia de la primera comparativa se repite en otro sector.** VDTP vuelve a ignorar las restricciones del negocio en las objeciones.
-3. **Hallazgo nuevo: hay negocios con dos niveles de cliente.** Si vendes a alguien que a su vez vende a otros (formar a formadoras), las objeciones de su cliente final también son tuyas. Ninguno de los dos agentes lo tiene previsto en las instrucciones. vdtp2 lo ha detectado por las restricciones, pero conviene hacerlo explícito.
+3. **Hallazgo nuevo: hay negocios con dos niveles de cliente.** Si vendes a alguien que a su vez vende a otros (formar a formadoras), las objeciones de su cliente final también son tuyas. Ninguno de los dos agentes lo tiene previsto en las instrucciones. Villanueva lo ha detectado por las restricciones, pero conviene hacerlo explícito.
 4. **VDTP sigue siendo el más directo** para alguien que no tiene claro su negocio y quiere avanzar paso a paso.
 
 ## Propuestas para v0.3

@@ -1,4 +1,4 @@
-# Análisis de salidas del agente Avatar · base para vdtp2
+# Análisis de salidas del agente Avatar · base para Villanueva
 
 Fuentes analizadas (resultados propios del agente Avatar, dos proyectos distintos):
 
@@ -64,7 +64,7 @@ Los dos documentos son las dos fases de un mismo proceso: el primero **abre** (g
 - Pierde parte de la riqueza del primero: menos escenas, sin personajes, sin vocabulario explícito ni bloque "cómo habla".
 - Algunos puntos quedan muy secos ("Tranquilidad." como resultado esperado, sin desarrollo).
 
-## 3. Conclusión para vdtp2
+## 3. Conclusión para Villanueva
 
 El mejor resultado sale de **combinar los dos modos** en un mismo agente:
 
@@ -82,4 +82,4 @@ Además de los dos modos, conviene incorporar:
 - **Fecha de caducidad** de cualquier mensaje con plazo.
 - **Resumen de traspaso** para Destino y Producto de entrada.
 
-La estructura narrativa de fondo (cliente, guía, plan, llamada a la acción, éxito y fracaso) es la de marcos públicos de *storytelling* de marca. El valor diferencial de vdtp2 está en las plantillas de campos, la ampliación dirigida y la disciplina de validación, que salen de vuestro propio trabajo.
+La estructura narrativa de fondo (cliente, guía, plan, llamada a la acción, éxito y fracaso) es la de marcos públicos de *storytelling* de marca. El valor diferencial de Villanueva está en las plantillas de campos, la ampliación dirigida y la disciplina de validación, que salen de vuestro propio trabajo.
